@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: calc(100% - 2rem);
+  height: 100%;
+  width: min(15rem, 80svw);
+  min-width: 13rem;
+  padding: 1rem;
+  gap: 1rem;
+
+  color: var(--app-text-color);
+  background-color: var(--app-panel-color);
+
+  h3 {
+    margin: 0;
+  }
+}

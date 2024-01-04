@@ -1,0 +1,34 @@
+:host {
+  display: grid;
+  place-content: center;
+  flex-shrink: 0;
+  height: 90svh;
+
+  .content {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    max-width: 30rem;
+
+    img {
+      height: 8rem;
+      margin: 0 auto;
+      object-fit: contain;
+      object-position: center right;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: var(--app-text-decorated);
+    }
+
+    .cta {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+:host {
+
+  .route-container {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+  }
+
+  mat-drawer-container {
+    height: 100%;
+    background: none;
+  }
+
+  mat-drawer {
+    background: none;
+  }
+}
