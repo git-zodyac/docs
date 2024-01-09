@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 6rem 1rem;
+  text-align: center;
+  min-height: 40dvh;
+  font-size: 1rem;
+
+  color: var(--app-text-color);
+
+  p {
+    max-width: 30rem;
+    margin: auto;
+  }
+
+  .avatar {
+    width: 4rem;
+    height: 4rem;
+    margin: 2rem auto 1rem;
+    border-radius: 50%;
+    background-color: var(--app-panel-color);
+    box-shadow: var(--shadow-hard);
+  }
+}

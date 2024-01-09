@@ -10,7 +10,7 @@
   --app-text-color: #d9d9d9;
   --app-text-decorated: #cdcdcd;
   --app-bg-color: #2a2a2a;
-  --app-panel-color: #343339;
+  --app-panel-color: #242427;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,7 +24,10 @@
   }
 }
 
-html, body { height: 100%; }
+html, body {
+  font-size: 14px;
+  height: 100%;
+}
 body {
   margin: 0;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
@@ -39,8 +42,8 @@ body {
 
   &::after {
     background:
-      radial-gradient(circle at bottom left, var(--theme-primary-400) -50%, transparent 50%),
-      radial-gradient(circle at top right, var(--theme-accent-400) -50%, transparent 50%);
+      radial-gradient(circle at bottom left, var(--theme-primary-400) -25%, transparent 50%),
+      radial-gradient(circle at top right, var(--theme-accent-400) -25%, transparent 50%);
     background-color: var(--app-bg-color);
 
     position: fixed;
@@ -74,9 +77,8 @@ a {
 article {
   display: flex;
   flex-flow: column nowrap;
+  max-width: min(800px, 100%);
   overflow: hidden;
-  // overflow-y: visible;
-  max-width: 800px;
   margin: 0 auto;
   flex-shrink: 0;
   width: 100%;

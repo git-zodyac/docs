@@ -1,1 +1,55 @@
-<h3>Packages</h3>
+<!-- <h3>Packages</h3> -->
+<mat-nav-list>
+  <h3 mat-subheader>Framework</h3>
+  <mat-divider />
+
+  <mat-list-item routerLink="/getting-started" routerLinkActive="active">
+    <a mat-line>Getting started</a>
+  </mat-list-item>
+  <mat-list-item routerLink="/installation" routerLinkActive="active">
+    <a mat-line>Installation</a>
+  </mat-list-item>
+
+  <mat-list-item routerLink="/core-concepts" routerLinkActive="active">
+    <a mat-line>Core concepts</a>
+  </mat-list-item>
+  <mat-list-item routerLink="/api-engines" routerLinkActive="active">
+    <a mat-line>API Engines</a>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list>
+  <h3 mat-subheader>Toolbox</h3>
+  <mat-divider />
+  <mat-list-item routerLink="/toolbox" routerLinkActive="active">
+    <a mat-line>About toolbox</a>
+  </mat-list-item>
+
+  <mat-list-item routerLink="/toolbox/zodyac-env" routerLinkActive="active">
+    <a matListItemTitle>&#64;zodyac/env</a>
+    <span matListItemLine>Environment validation</span>
+  </mat-list-item>
+  <mat-list-item routerLink="/toolbox/zodyac-express" routerLinkActive="active">
+    <a matListItemTitle>&#64;zodyac/express</a>
+    <span matListItemLine>Zod validation for Express</span>
+  </mat-list-item>
+  <mat-list-item routerLink="/toolbox/zodyac-mongoose" routerLinkActive="active">
+    <a matListItemTitle>&#64;zodyac/mongoose</a>
+    <span matListItemLine>Mongoose schema of zod object</span>
+  </mat-list-item>
+</mat-nav-list>
+<mat-nav-list>
+  <h3 mat-subheader>Documentation</h3>
+  <mat-divider />
+  <mat-list-item routerLink="/docs" routerLinkActive="active">
+    <a matListItemTitle>Read documentation</a>
+  </mat-list-item>
+  <mat-list-item routerLink="/docs/cookbook" routerLinkActive="active">
+    <a matListItemTitle>Cookbook</a>
+  </mat-list-item>
+  <mat-list-item routerLink="/docs/extending" routerLinkActive="active">
+    <a matListItemTitle>Extending Zodyac</a>
+  </mat-list-item>
+  <mat-list-item routerLink="/docs/contribute" routerLinkActive="active">
+    <a matListItemTitle>Contribution</a>
+  </mat-list-item>
+</mat-nav-list>

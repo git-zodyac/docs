@@ -1,13 +1,14 @@
 :host {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
   color: var(--app-text-color);
-  gap: 1rem;
+  gap: 1rem 2rem;
 
   .card {
     display: flex;
     flex-flow: column nowrap;
     background-color: var(--app-panel-color);
+    box-shadow: var(--shadow-medium);
     padding: .75rem 1rem;
     border-radius: 1rem;
     gap: 1rem;
