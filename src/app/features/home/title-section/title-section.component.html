@@ -1,18 +1,15 @@
-<div class="content">
+<div class="content" *transloco="let t; read: 'home.title'">
   <img src="assets/logo.png" alt="Zodyac logo">
   <h1>Zodyac</h1>
-  <p>
-    A&nbsp;modular Node.JS&nbsp;framework for&nbsp;<a href="https://npmjs.com/package/zod" target="_blank">zod&nbsp;maniacs</a>.
-    Turn&nbsp;your&nbsp;zod&nbsp;schemas into&nbsp;a fully&nbsp;functional REST&nbsp;API with&nbsp;minimal&nbsp;effort.
-  </p>
+  <p [innerHTML]="t('main')"></p>
   <div class="cta">
     <button mat-flat-button color="primary" routerLink="/getting-started">
       <mat-icon>code</mat-icon>
-      Get started
+      {{ t('cta') }}
     </button>
     <a mat-stroked-button color="primary" href="https://github.com/git-zodyac" target="_blank">
       <mat-icon svgIcon="github">Github</mat-icon>
-      Source code
+      {{ t('source') }}
     </a>
   </div>
 </div>

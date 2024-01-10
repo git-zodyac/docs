@@ -1,11 +1,7 @@
-<p>
-  The&nbsp;main&nbsp;idea of&nbsp;this&nbsp;project is&nbsp;to&nbsp;create a&nbsp;fully-modular Node.js&nbsp;framework
-  with&nbsp;bare&nbsp;minimum core&nbsp;decisions so&nbsp;that&nbsp;developers can&nbsp;have full&nbsp;control
-  over&nbsp;how&nbsp;they create&nbsp;REST&nbsp;API&nbsp;servers, fast and&nbsp;minimalistic&nbsp;way.
-  <br><br>
-  <a href="https://npmjs.com/package/zod" target="_blank">Zod</a> is&nbsp;an&nbsp;amazing&nbsp;tool for&nbsp;describing&nbsp;everything from&nbsp;data&nbsp;models to&nbsp;API&nbsp;endpoints. So&nbsp;why&nbsp;not putting&nbsp;it in&nbsp;the&nbsp;very&nbsp;heart of&nbsp;a&nbsp;framework?
-</p>
-<div class="sign">
-  <img class="avatar" src="https://avatars.githubusercontent.com/u/137602160?v=4" />
-  <div class="name">- Bebrasmell</div>
-</div>
+<ng-container *transloco="let t; read: 'home.concept'">
+  <p [innerHTML]="t('text')"></p>
+  <div class="sign">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/137602160?v=4" />
+    <div class="name" [innerHTML]="t('sign')"></div>
+  </div>
+  </ng-container>

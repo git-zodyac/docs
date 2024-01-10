@@ -1,0 +1,42 @@
+:host {
+  color: var(--app-text-decorated);
+
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1rem;
+
+    .card {
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 1rem;
+      gap: 1rem;
+
+      border-radius: 1rem;
+      background-color: var(--app-panel-color);
+      box-shadow: var(--shadow-medium);
+
+      &-title {
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        color: var(--theme-primary-600);
+      }
+
+      &-content {
+        font-size: .875rem;
+
+        b {
+          font-weight: normal;
+          color: var(--theme-primary-800);
+        }
+      }
+    }
+  }
+}

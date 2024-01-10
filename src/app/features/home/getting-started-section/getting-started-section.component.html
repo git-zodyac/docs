@@ -1,0 +1,49 @@
+<ng-container *transloco="let t; read: 'home.getting-started'">
+  <h2 [innerHTML]="t('title')"></h2>
+  <p [innerHTML]="t('description')"></p>
+
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">
+        <span>1</span>
+      </div>
+      <div class="step-info">
+        <h3 [innerHTML]="t('step-1.title')"></h3>
+        <p [innerHTML]="t('step-1.description')"></p>
+      </div>
+    </div>
+    <div class="step-content">
+      <pre><code markup>npm install -g &#64;zodyac/cli</code></pre>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">
+        <span>2</span>
+      </div>
+      <div class="step-info">
+        <h3 [innerHTML]="t('step-2.title')"></h3>
+        <p [innerHTML]="t('step-2.description')"></p>
+      </div>
+    </div>
+    <div class="step-content">
+      <pre><code markup>zy init</code></pre>
+
+      <div class="notice" [innerHTML]="t('step-2.notice')"></div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">
+        <span>3</span>
+      </div>
+      <div class="step-info">
+        <h3 [innerHTML]="t('step-3.title')"></h3>
+        <p [innerHTML]="t('step-3.description')"></p>
+      </div>
+    </div>
+    <div class="step-content">
+      <pre><code markup>zy serve</code></pre>
+    </div>
+  </div>
+</ng-container>

@@ -1,27 +1,29 @@
-<div class="card">
-  <mat-icon color="accent" class="card-icon">tips_and_updates</mat-icon>
-  <h3>Fluent</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-  <button mat-button color="primary">
-    Learn more
-    <mat-icon>chevron_right</mat-icon>
-  </button>
-</div>
-<div class="card">
-  <mat-icon color="accent" class="card-icon">workspaces</mat-icon>
-  <h3>Flexible</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-  <button mat-button color="primary">
-    Learn more
-    <mat-icon>chevron_right</mat-icon>
-  </button>
-</div>
-<div class="card">
-  <mat-icon color="accent" class="card-icon">data_object</mat-icon>
-  <h3>Extendable</h3>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-  <button mat-button color="primary">
-    Learn more
-    <mat-icon>chevron_right</mat-icon>
-  </button>
-</div>
+<ng-container *transloco="let t; read: 'home.features'">
+  <div class="card">
+    <mat-icon color="accent" class="card-icon">tips_and_updates</mat-icon>
+    <h3>{{ t('card-0.title') }}</h3>
+    <p [innerHTML]="t('card-0.description')"></p>
+    <button mat-button color="primary">
+      <mat-icon>chevron_right</mat-icon>
+      {{ t('card-0.cta') }}
+    </button>
+  </div>
+  <div class="card">
+    <mat-icon color="accent" class="card-icon">workspaces</mat-icon>
+    <h3>{{ t('card-1.title') }}</h3>
+    <p [innerHTML]="t('card-1.description')"></p>
+    <button mat-button color="primary">
+      <mat-icon>chevron_right</mat-icon>
+      {{ t('card-1.cta') }}
+    </button>
+  </div>
+  <div class="card">
+    <mat-icon color="accent" class="card-icon">data_object</mat-icon>
+    <h3>{{ t('card-2.title') }}</h3>
+    <p [innerHTML]="t('card-2.description')"></p>
+    <button mat-button color="primary">
+      <mat-icon>chevron_right</mat-icon>
+      {{ t('card-2.cta') }}
+    </button>
+  </div>
+</ng-container>

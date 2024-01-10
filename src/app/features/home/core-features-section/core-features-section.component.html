@@ -1,1 +1,30 @@
-<p>core-features-section works!</p>
+<ng-container *transloco="let t; read: 'home.tools'">
+  <h2>What's in the box</h2>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-title" [innerHTML]="t('card-0.title')"></div>
+      <p class="card-content" [innerHTML]="t('card-0.description')"></p>
+    </div>
+    <div class="card">
+      <div class="card-title" [innerHTML]="t('card-1.title')"></div>
+      <p class="card-content" [innerHTML]="t('card-1.description')"></p>
+    </div>
+    <div class="card">
+      <div class="card-title" [innerHTML]="t('card-2.title')"></div>
+      <p class="card-content" [innerHTML]="t('card-2.description')"></p>
+    </div>
+    <div class="card">
+      <div class="card-title" [innerHTML]="t('card-3.title')"></div>
+      <p class="card-content" [innerHTML]="t('card-3.description')"></p>
+    </div>
+    <div class="card">
+      <div class="card-title" [innerHTML]="t('card-4.title')"></div>
+      <p class="card-content" [innerHTML]="t('card-4.description')"></p>
+    </div>
+    <div class="card">
+      <div class="card-title" [innerHTML]="t('card-5.title')"></div>
+      <p class="card-content" [innerHTML]="t('card-5.description')"></p>
+    </div>
+  </div>
+</ng-container>

@@ -5,9 +5,9 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
   standalone: true,
-  selector: 'section[architecture]',
-  templateUrl: './architecture-section.component.html',
-  styleUrl: './architecture-section.component.scss',
+  selector: 'section[getting-started]',
+  templateUrl: './getting-started-section.component.html',
+  styleUrl: './getting-started-section.component.scss',
   imports: [MatButtonModule, MatIconModule, TranslocoModule],
 })
-export class ArchitectureSectionComponent {}
+export class GettingStartedSectionComponent {}

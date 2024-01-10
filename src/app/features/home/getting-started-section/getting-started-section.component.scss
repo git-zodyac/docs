@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  color: var(--app-text-decorated);
+  gap: 1rem;
+
+  .step {
+    border-radius: 1rem;
+    background-color: var(--app-panel-color);
+    padding: .75rem 1rem;
+
+    &-header {
+      display: flex;
+      flex-flow: row nowrap;
+      // align-items: center;
+      gap: 1rem;
+
+      .step-number {
+        display: grid;
+        place-content: center;
+        flex-shrink: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: var(--theme-primary-300);
+        color: var(--app-panel-color);
+        font-weight: 700;
+      }
+
+      .step-info {
+        h3 {
+          margin-block: .5rem;
+        }
+
+        p {
+          margin: 0
+        }
+      }
+    }
+
+    &-content {
+      padding-left: 3.5rem;
+
+      pre {
+        display: block;
+        border-radius: .5rem;
+        background-color: var(--app-panel-accent);
+        color: var(--app-text-color);
+        padding: 1rem;
+      }
+    }
+  }
+}

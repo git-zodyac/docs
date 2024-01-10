@@ -1,0 +1,81 @@
+{
+  "title": {
+    "main": "A&nbsp;modular Node.JS&nbsp;framework for&nbsp;<a href=\"https://npmjs.com/package/zod\" target=\"_blank\">zod&nbsp;maniacs</a>.Turn&nbsp;your&nbsp;zod&nbsp;schemas into&nbsp;a fully&nbsp;functional REST&nbsp;API with&nbsp;minimal&nbsp;effort.",
+    "cta": "Get started",
+    "source": "Source code"
+  },
+  "features": {
+    "card-0": {
+      "title": "Fluent",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "cta": "Learn more"
+    },
+    "card-1": {
+      "title": "Flexible",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "cta": "Learn more"
+    },
+    "card-2": {
+      "title": "Extendable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "cta": "Learn more"
+    }
+  },
+  "concept": {
+    "text": "The&nbsp;main&nbsp;idea of&nbsp;this&nbsp;project is&nbsp;to&nbsp;create a&nbsp;fully-modular Node.js&nbsp;framework with&nbsp;bare&nbsp;minimum core&nbsp;decisions so&nbsp;that&nbsp;developers can&nbsp;have full&nbsp;control over&nbsp;how&nbsp;they create&nbsp;REST&nbsp;API&nbsp;servers, fast and&nbsp;minimalistic&nbsp;way.<br><br><a href=\"https://npmjs.com/package/zod\" target=\"_blank\">Zod</a> is&nbsp;an&nbsp;amazing&nbsp;tool for&nbsp;describing&nbsp;everything from&nbsp;data&nbsp;models to&nbsp;API&nbsp;endpoints. So&nbsp;why&nbsp;not putting&nbsp;it in&nbsp;the&nbsp;very&nbsp;heart of&nbsp;a&nbsp;framework?",
+    "sign": "- Bebrasmell"
+  },
+  "tools": {
+    "title": "What's in the box",
+    "card-0": {
+      "title": "Dependency Injection",
+      "description": "Swap out&nbsp;modules with&nbsp;ease. Controll your&nbsp;state with&nbsp;the&nbsp;power of&nbsp;dependency&nbsp;injection."
+    },
+    "card-1": {
+      "title": "Lifecycle",
+      "description": " All&nbsp;the&nbsp;modules are&nbsp;synced, so&nbsp;you&nbsp;can&nbsp;be&nbsp;sure that&nbsp;everything is&nbsp;initialized&nbsp;in&nbsp;the&nbsp;right&nbsp;order."
+    },
+    "card-2": {
+      "title": "Declarative",
+      "description": "Everything is a&nbsp;module, composable and&nbsp;extendable. Create and&nbsp;plug&nbsp;them right&nbsp;into the&nbsp;dependency&nbsp;tree."
+    },
+    "card-3": {
+      "title": "Type&nbsp;safety",
+      "description": "Written in&nbsp;<a href=\"https://typescriptlang.com\" target=\"_blank\">Typescript</a> with&nbsp;<a href=\"https://npmjs.com/package/zod\" target=\"_blank\">Zod</a> request&nbsp;validation, type&nbsp;safety becomes&nbsp;guaranteed."
+    },
+    "card-4": {
+      "title": "Guards / middlewares",
+      "description": "Add guards to&nbsp;your&nbsp;routes to&nbsp;protect them from&nbsp;unauthorized&nbsp;access or invalid&nbsp;data."
+    },
+    "card-5": {
+      "title": "Dev tools",
+      "description": "A&nbsp;set&nbsp;of&nbsp;tools for&nbsp;<b>building</b>, <b>watching</b>, <b>serving</b>, and&nbsp;<b>linting</b> your&nbsp;app with&nbsp;zero&nbsp;config."
+    },
+    "card-6": {
+      "title": "OpenAPI",
+      "description": "Generate OpenAPI&nbsp;specification&nbsp;from&nbsp;your&nbsp;routes&nbsp;with&nbsp;minimal&nbsp;effort."
+    }
+  },
+  "architecture": {
+    "title": "Architecture",
+    "description": "Zodyac implements&nbsp;a&nbsp;variation of&nbsp;<a href=\"https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html\" target=\"_blank\">Clean&nbsp;architecture</a>.It&nbsp;is&nbsp;designed to&nbsp;be as&nbsp;abstract and&nbsp;modular as&nbsp;possible, so&nbsp;that your&nbsp;business&nbsp;logic would&nbsp;not&nbsp;rely on&nbsp;implementation.",
+    "cta": "More core concepts"
+  },
+  "getting-started": {
+    "title": "Getting started",
+    "description": "Some description here",
+    "step-1": {
+      "title": "Installing Zodyac CLI",
+      "description": "Install the&nbsp;CLI&nbsp;globally running&nbsp;the&nbsp;following&nbsp;command:"
+    },
+    "step-2": {
+      "title": "Run initiation script",
+      "description": "The&nbsp;CLI will&nbsp;ask&nbsp;you several&nbsp;questions and&nbsp;generate the&nbsp;initial&nbsp;structure for&nbsp;you.",
+      "notice": "You&nbsp;can skip&nbsp;adding lint, git or&nbsp;docker by&nbsp;adding <code class=\"inserted\">--skip-eslint</code>, <code class=\"inserted\">--skip-git</code> or&nbsp;<code class=\"inserted\">--skip-docker</code> flags."
+    },
+    "step-3": {
+      "title": "Start the server",
+      "description": "Start&nbsp;the&nbsp;application in&nbsp;development&nbsp;mode from&nbsp;inside the&nbsp;project&nbsp;folder:"
+    }
+  }
+}
