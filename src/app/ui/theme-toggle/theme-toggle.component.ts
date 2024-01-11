@@ -16,10 +16,13 @@ export class ThemeToggleComponent {
   ) {
     effect(() => {
       const theme = this._theme.theme();
+      const device = this._theme.device();
       if (this._el?.nativeElement) {
         this._el.nativeElement.classList.remove('theme-light', 'theme-dark');
         if (theme) {
           this._el.nativeElement.classList.add(`theme-${theme}`);
+        } else {
+          this._el.nativeElement.classList.add(`theme-${device}`);
         }
       }
     });

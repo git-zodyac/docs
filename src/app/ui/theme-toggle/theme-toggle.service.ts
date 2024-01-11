@@ -6,46 +6,46 @@ type Theme = 'light' | 'dark' | undefined;
   providedIn: 'root',
 })
 export class ThemeToggleService {
-  theme = signal<Theme>(localStorage.getItem('__theme') as Theme);
+  readonly theme = signal<Theme | null>(
+    localStorage.getItem('__theme') as Theme | null,
+  );
+
+  private isDefaultDark = window.matchMedia('(prefers-color-scheme: dark)');
+  readonly device = signal<Theme>(
+    this.isDefaultDark.matches ? 'dark' : 'light',
+  );
 
   constructor() {
+    this.isDefaultDark.addEventListener('change', (e) => {
+      if (this.theme()) return;
+      this.device.set(e.matches ? 'dark' : 'light');
+    });
+
     effect(() => {
       const theme = this.theme();
       document.body.classList.remove('theme-light', 'theme-dark');
 
-      if (!theme) {
-        localStorage.removeItem('__theme');
-        return;
-      }
+      if (!theme) return;
 
       document.body.classList.add(`theme-${theme}`);
-      localStorage.setItem('__theme', theme);
     });
-
-    const theme = localStorage.getItem('__theme') as Theme;
-    if (!theme) {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        this.theme.set('dark');
-        return;
-      }
-
-      this.theme.set('light');
-      return;
-    }
   }
 
   toggle(): void {
-    if (!this.theme()) {
-      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        this.theme.set('light');
-        return;
-      }
+    const theme = this.theme();
+    if (!theme) {
+      const target = this.device() === 'dark' ? 'light' : 'dark';
+      this.theme.set(target);
 
-      this.theme.set('light');
+      localStorage.setItem('__theme', target);
       return;
     }
 
-    this.theme.set(this.theme() === 'dark' ? 'light' : 'dark');
+    const target = theme === 'dark' ? 'light' : 'dark';
+    this.theme.set(target);
+
+    localStorage.setItem('__theme', target);
+    return;
   }
 
   reset(): void {

@@ -1,1 +1,1 @@
-<mat-icon>{{ (_theme.theme() === 'dark')? 'light' : 'dark' }}_mode</mat-icon>
+<mat-icon>{{ ((_theme.theme() ?? _theme.device()) === 'dark')? 'light' : 'dark' }}_mode</mat-icon>
