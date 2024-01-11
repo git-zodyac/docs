@@ -33,18 +33,17 @@ export class ThemeToggleService {
 
   toggle(): void {
     const theme = this.theme();
-    if (!theme) {
-      const target = this.device() === 'dark' ? 'light' : 'dark';
-      this.theme.set(target);
 
+    let target: Theme;
+
+    if (!theme) {
+      target = this.device() === 'dark' ? 'light' : 'dark';
       localStorage.setItem('__theme', target);
-      return;
+    } else {
+      target = theme === 'dark' ? 'light' : 'dark';
     }
 
-    const target = theme === 'dark' ? 'light' : 'dark';
     this.theme.set(target);
-
-    localStorage.setItem('__theme', target);
     return;
   }
 
