@@ -1,0 +1,25 @@
+<ng-container *transloco="let t; read: ''"></ng-container>
+<div class="column leading">
+  <a href="/">
+    <h1>
+      <img src="assets/logo@0.1x.png" alt="Zodyac logo">
+      zodyac.dev
+    </h1>
+  </a>
+  <p class="warning">Don't trust the owls.</p>
+</div>
+
+<div class="column" *transloco="let t; read: 'menu.framework'">
+  <h2>{{ t('title') }}</h2>
+  <a href="/docs/getting-started">{{ t('getting-started') }}</a>
+  <a href="/docs/installation">{{ t('installation') }}</a>
+  <a href="/docs/core-concepts">{{ t('core-concepts') }}</a>
+  <a href="/docs/api-engines">{{ t('api-engines') }}</a>
+</div>
+<div class="column" *transloco="let t; read: 'menu.docs'">
+  <h2>{{ t('title') }}</h2>
+  <a href="/docs">{{ t('title') }}</a>
+  <a href="/docs/cookbook">{{ t('cookbook') }}</a>
+  <a href="/docs/extending">{{ t('extending') }}</a>
+  <a href="/docs/contributing">{{ t('contributing') }}</a>
+</div>

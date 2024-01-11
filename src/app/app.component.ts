@@ -5,6 +5,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavService } from './ui/sidenav/sidenav.service';
 import { HeaderComponent } from './ui/header/header.component';
 import { MenuComponent } from './ui/menu/menu.component';
+import { FooterComponent } from './ui/footer/footer.component';
 
 @Component({
   standalone: true,
@@ -18,6 +19,7 @@ import { MenuComponent } from './ui/menu/menu.component';
     MatSidenavModule,
     RouterOutlet,
     MenuComponent,
+    FooterComponent,
   ],
 })
 export class AppComponent {

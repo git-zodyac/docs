@@ -1,23 +1,23 @@
 {
   "title": {
-    "main": "A&nbsp;modular Node.JS&nbsp;framework for&nbsp;<a href=\"https://npmjs.com/package/zod\" target=\"_blank\">zod&nbsp;maniacs</a>.Turn&nbsp;your&nbsp;zod&nbsp;schemas into&nbsp;a fully&nbsp;functional REST&nbsp;API with&nbsp;minimal&nbsp;effort.",
+    "main": "A&nbsp;modular Node.JS&nbsp;framework for&nbsp;<a href=\"https://npmjs.com/package/zod\" target=\"_blank\">zod&nbsp;maniacs</a>. Turn&nbsp;your&nbsp;zod&nbsp;schemas into&nbsp;a fully&nbsp;functional REST&nbsp;API with&nbsp;minimal&nbsp;effort.",
     "cta": "Get started",
     "source": "Source code"
   },
   "features": {
     "card-0": {
       "title": "Fluent",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "description": "Streamlined API&nbsp;creation. Describe&nbsp;models&nbsp;once and&nbsp;then reuse&nbsp;it&nbsp;everywhere.",
       "cta": "Learn more"
     },
     "card-1": {
       "title": "Flexible",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "description": "Plug&nbsp;modules in&nbsp;and&nbsp;out, control&nbsp;instances and&nbsp;replace them&nbsp;smoothly.",
       "cta": "Learn more"
     },
     "card-2": {
       "title": "Extendable",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "description": "Build your&nbsp;own&nbsp;modules. Connect any&nbsp;database or&nbsp;engine.",
       "cta": "Learn more"
     }
   },
@@ -58,7 +58,7 @@
   },
   "architecture": {
     "title": "Architecture",
-    "description": "Zodyac implements&nbsp;a&nbsp;variation of&nbsp;<a href=\"https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html\" target=\"_blank\">Clean&nbsp;architecture</a>.It&nbsp;is&nbsp;designed to&nbsp;be as&nbsp;abstract and&nbsp;modular as&nbsp;possible, so&nbsp;that your&nbsp;business&nbsp;logic would&nbsp;not&nbsp;rely on&nbsp;implementation.",
+    "description": "Zodyac implements&nbsp;a&nbsp;variation of&nbsp;<a href=\"https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html\" target=\"_blank\">Clean&nbsp;architecture</a>. It&nbsp;is&nbsp;designed to&nbsp;be as&nbsp;abstract and&nbsp;modular as&nbsp;possible, so&nbsp;that your&nbsp;business&nbsp;logic would&nbsp;not&nbsp;rely on&nbsp;implementation.",
     "cta": "More core concepts"
   },
   "getting-started": {
@@ -71,7 +71,7 @@
     "step-2": {
       "title": "Run initiation script",
       "description": "The&nbsp;CLI will&nbsp;ask&nbsp;you several&nbsp;questions and&nbsp;generate the&nbsp;initial&nbsp;structure for&nbsp;you.",
-      "notice": "You&nbsp;can skip&nbsp;adding lint, git or&nbsp;docker by&nbsp;adding <code class=\"inserted\">--skip-eslint</code>, <code class=\"inserted\">--skip-git</code> or&nbsp;<code class=\"inserted\">--skip-docker</code> flags."
+      "notice": "You&nbsp;can skip&nbsp;adding <a href=\"https://eslint.org/\" target=\"_blank\">eslint</a>, <a href=\"https://github.com/\" target=\"_blank\">git</a> or&nbsp;<a href=\"https://docker.com/\" target=\"_blank\">docker</a> by&nbsp;adding <code class=\"inserted\">&#8209;&#8209;skip-eslint</code>, <code class=\"inserted\">&#8209;&#8209;skip-git</code> or&nbsp;<code class=\"inserted\">&#8209;&#8209;skip-docker</code> flags."
     },
     "step-3": {
       "title": "Start the server",

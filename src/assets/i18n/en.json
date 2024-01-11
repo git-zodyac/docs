@@ -1,3 +1,26 @@
 {
-  "app_name": "Zodyac"
+  "app_name": "Zodyac",
+  "menu": {
+    "framework": {
+      "title": "Framework",
+      "getting-started": "Getting Started",
+      "installation": "Installation",
+      "core-concepts": "Core concepts",
+      "api-engines": "API Engines"
+    },
+    "toolbox": {
+      "title": "Toolbox",
+      "about": "About Toolbox",
+      "environment": "Environment validation",
+      "express": "Zod validation for Express",
+      "mongoose": "Zod object to Mongoose schema"
+    },
+    "docs": {
+      "title": "Documentation",
+      "read": "Read documentation",
+      "cookbook": "Cookbook",
+      "extending": "Extending Zodyac",
+      "contributing": "Contributing"
+    }
+  }
 }

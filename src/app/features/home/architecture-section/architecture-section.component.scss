@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   justify-content: center;
   align-items: center;
+  min-height: 60dvh;
   gap: 1rem;
 
   color: var(--app-text-decorated);

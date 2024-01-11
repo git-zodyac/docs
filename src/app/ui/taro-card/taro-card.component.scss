@@ -1,0 +1,65 @@
+:host {
+  padding: 1rem 1rem 2rem;
+  aspect-ratio: 3.5 / 6;
+  border-radius: 2rem;
+  box-shadow: var(--shadow-medium);
+  background: linear-gradient(45deg,
+    var(--app-panel-color),
+    var(--app-bg-color)
+  );
+  color: var(--app-text-decorated);
+  max-width: min(30rem, 80dvw);
+  border: .1rem solid rgba(gray, .25);
+  transition: transform .05s ease-in-out;
+
+  .card-inner {
+    display: flex;
+    position: relative;
+    flex-flow: column nowrap;
+    border: 6px double var(--theme-primary-800);
+    height: calc(100% - 3rem);
+    border-radius: 1rem;
+    padding: 2rem;
+    gap: 2rem;
+
+    .illustration {
+      display: grid;
+      place-content: center;
+      flex-basis: 66%;
+      width: 100%;
+
+      img {
+        margin: auto;
+        max-width: 15rem;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-basis: 33%;
+      flex-flow: column nowrap;
+      text-align: center;
+      gap: .5rem;
+
+      button {
+        margin-top: 1rem;
+        margin-inline: auto;
+      }
+    }
+
+    .error-code {
+      position: absolute;
+      bottom: -1.75rem;
+      font-size: 1.25rem;
+      border-radius: 2rem;
+      color: var(--theme-primary);
+      border: 5px double var(--theme-primary);
+      background-color: var(--app-panel-color);
+      transform: translateX(-50%);
+      text-align: center;
+      padding: .5rem 1rem;
+      width: 4rem;
+      left: 50%;
+    }
+  }
+}
