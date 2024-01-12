@@ -1,4 +1,9 @@
 @import './theme.scss';
+@import 'highlight.js/styles/github-dark.css';
+
+.hljs {
+  background: none !important;
+}
 
 @mixin light {
   --app-text-color: #111111;

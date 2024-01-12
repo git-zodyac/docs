@@ -1,4 +1,5 @@
 import { Injectable, effect, signal } from '@angular/core';
+import { HighlightLoader } from 'ngx-highlightjs';
 
 type Theme = 'light' | 'dark' | undefined;
 
@@ -15,10 +16,14 @@ export class ThemeToggleService {
     this.isDefaultDark.matches ? 'dark' : 'light',
   );
 
-  constructor() {
+  constructor(private _hljs: HighlightLoader) {
     this.isDefaultDark.addEventListener('change', (e) => {
       if (this.theme()) return;
-      this.device.set(e.matches ? 'dark' : 'light');
+
+      const theme = e.matches ? 'dark' : 'light';
+
+      this.device.set(theme);
+      this._hljs.setTheme(`assets/styles/github-${theme}.css`);
     });
 
     effect(() => {
@@ -28,6 +33,7 @@ export class ThemeToggleService {
       if (!theme) return;
 
       document.body.classList.add(`theme-${theme}`);
+      this._hljs.setTheme(`assets/styles/github-${theme}.css`);
     });
   }
 

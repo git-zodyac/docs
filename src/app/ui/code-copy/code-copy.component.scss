@@ -1,0 +1,24 @@
+:host {
+  display: flex !important;
+  flex-flow: row nowrap;
+  overflow: hidden;
+
+  .code-wrap {
+    flex-basis: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  button {
+    flex-shrink: 0;
+
+    mat-icon {
+      &.copied {
+        color: var(--theme-success);
+      }
+      &.error {
+        color: var(--theme-warn);
+      }
+    }
+  }
+}
