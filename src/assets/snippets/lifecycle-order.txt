@@ -1,0 +1,39 @@
+import { Module, Provide } from '@zodyac/core';
+import { zEnv } from 'env.z';
+
+@Provivide(ChildModule)
+export class ParentModule extends Module<typeof zEnv> {
+  onInit = () => {
+    console.log('Parent onInit is fired second');
+  }
+
+  onReady = () => {
+    console.log('Parent onReady is fired second');
+  }
+
+  onStart = () => {
+    console.log('Parent onStart is fired second');
+  }
+
+  onDestroy = () => {
+    console.log('Parent onDestroy is fired second');
+  }
+}
+
+export class ChildModule extends Module<typeof zEnv> {
+  onInit = () => {
+    console.log('Child onInit is fired first');
+  }
+
+  onReady = () => {
+    console.log('Child onReady is fired first');
+  }
+
+  onStart = () => {
+    console.log('Child onStart is fired first');
+  }
+
+  onDestroy = () => {
+    console.log('Child onDestroy is fired first');
+  }
+}

@@ -1,14 +1,12 @@
 {
   "title": "Getting&nbsp;started",
-  "text": "This is the description of the guide.",
+  "text": "Learn how to install Zodyac and create your first project.",
   "intro": {
     "title": "Part&nbsp;1: Introduction",
-    "text": "This is the introduction to the guide.",
+    "text": "In this article you will learn about the basic concepts of Zodyac, how to install necessary dependencies and how to use them to build your application.",
     "before": {
       "title": "Before you start",
       "text": "Zodyac uses several tools and concepts to make your development more convenient:",
-      "node": "Node.js",
-      "ts": "TypeScript",
       "di": "Dependency injection pattern",
       "oop": "Object-oriented programming concepts"
     },
@@ -16,7 +14,7 @@
   },
   "install": {
     "title": "Part&nbsp;2: Installation",
-    "text": "This is the second part of the guide.",
+    "text": "To jump right into developing a new project, you can use Zodyac CLI. It will create a new project for you and install all the necessary dependencies",
     "step1": {
       "step": "Step&nbsp;1",
       "text": "Install Zodyac CLI globally using npm:"
@@ -30,7 +28,8 @@
   },
   "app": {
     "title": "Part&nbsp3: Application",
-    "text": "This is the third part of the guide."
+    "text": "Application is the main module of your project which represents the root of your dependency tree and the entry point of your server. Application also has a lifecycle (see below). The generic type of your application is the type of your <code class=\"inserted\">Environment schema</code>, so it should be included as a Zod object in configuration:",
+    "root": "<code class=\"inserted\">Application</code> must be the root module of your project. It is the only module that is not added to any other module. You can add dependencies to it by adding modules to your application configuration:"
   },
   "usage": {
     "title": "Part&nbsp;4: Modules",
@@ -48,15 +47,14 @@
       "start-text": "This hook is called when the parent <code class=\"inserted\">Application</code> is starting.",
       "destroy": "onDestroy",
       "destroy-text": "This hook is called when the parent <code class=\"inserted\">Application</code> is being destroyed. You can do cleanup here.",
-      "more": "Learn more about <a href=\"/docs/cli/init\">Module lifecycle</a>."
+      "more": "Learn more about <a href=\"/docs/lifecycle\">Module lifecycle</a>."
     },
     "more": "Learn more about <a href=\"/docs/cli/init\">Modules</a>."
   },
   "deps": {
     "title": "Part&nbsp;5: Dependencies",
     "text": "Zodyac organizes your code into modules and manages their dependencies. You can add dependencies to your module by adding <code class=\"inserted\">@Provide</code> decorator to the constructor:",
-    "provide": "This decorator can accept a single module, an array of modules or a list of providers (see below).",
-    "root": "<code class=\"inserted\">Application</code> must be the root module of your project. It is the only module that is not added to any other module. You can add dependencies to it by adding modules to your application configuration:",
+    "provide": "This decorator can accept a single module, an array of modules or a list of providers.",
     "providers": "Learn more about <a href=\"/docs/providers\">Providers</a>."
   }
 }

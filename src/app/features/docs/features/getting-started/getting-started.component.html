@@ -15,16 +15,18 @@
     <h3 [innerHTML]="t('intro.before.title')"></h3>
     <p [innerHTML]="t('intro.before.text')"></p>
     <ul>
-      <li [innerHTML]="t('intro.before.node')"></li>
-      <li [innerHTML]="t('intro.before.ts')"></li>
+      <li>Javascript in Node.js</li>
+      <li>Typescript</li>
       <li [innerHTML]="t('intro.before.oop')"></li>
       <li [innerHTML]="t('intro.before.di')"></li>
+      <li>Zod</li>
     </ul>
 
     <br>
     <h3 [innerHTML]="t('intro.prerequisites')"></h3>
     <ul>
       <li>Node.js 18+</li>
+      <li>NPM</li>
     </ul>
   </section>
   <section>
@@ -53,6 +55,14 @@
       <h2 [innerHTML]="t('app.title')"></h2>
     </div>
     <p [innerHTML]="t('app.text')"></p>
+    <pre copy>
+      <code [highlight]="'app' | snippet | async" [languages]="['ts']"></code>
+    </pre>
+
+    <p [innerHTML]="t('app.root')"></p>
+    <pre copy>
+      <code [highlight]="'app-provider' | snippet | async" [languages]="['ts']"></code>
+    </pre>
   </section>
   <section>
     <div class="section-header">
@@ -64,7 +74,7 @@
 
     <p class="pre-code" [innerHTML]="t('usage.module')"></p>
     <pre copy>
-      <code [highlight]="module_or"></code>
+      <code [highlight]="'first-module' | snippet | async" [languages]="['ts']"></code>
     </pre>
 
     <!-- <p class="pre-code" [innerHTML]="t('usage.lifecycle')"></p> -->
@@ -90,7 +100,7 @@
       </li>
     </ol>
     <pre copy>
-      <code [highlight]="module_lc"></code>
+      <code [highlight]="'lifecycle' | snippet | async" [languages]="['ts']"></code>
     </pre>
     <p class="notice" [innerHTML]="t('usage.hooks.more')"></p>
   </section>
@@ -101,14 +111,9 @@
 
     <p [innerHTML]="t('deps.text')"></p>
     <pre copy>
-      <code [highlight]="deps"></code>
+      <code [highlight]="'provide' | snippet | async" [languages]="['ts']"></code>
     </pre>
     <p [innerHTML]="t('deps.provide')"></p>
-
-    <p [innerHTML]="t('deps.root')"></p>
-    <pre copy>
-      <code [highlight]="root"></code>
-    </pre>
 
     <p class="notice" [innerHTML]="t('deps.providers')"></p>
   </section>

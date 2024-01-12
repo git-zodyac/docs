@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InstallationComponent } from './installation.component';
+import { LifecycleComponent } from './lifecycle.component';
 
-describe('InstallationComponent', () => {
-  let component: InstallationComponent;
-  let fixture: ComponentFixture<InstallationComponent>;
+describe('LifecycleComponent', () => {
+  let component: LifecycleComponent;
+  let fixture: ComponentFixture<LifecycleComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InstallationComponent]
+      imports: [LifecycleComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(InstallationComponent);
+    fixture = TestBed.createComponent(LifecycleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,5 +1,6 @@
 :host {
   overflow: visible;
+  color: var(--app-text-color);
 
   @media screen and (min-width: 800px) {
     gap: 2rem;

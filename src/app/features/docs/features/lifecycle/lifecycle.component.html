@@ -1,0 +1,35 @@
+<ng-container *transloco="let t; read: 'lifecycle'">
+  <section class="title">
+    <div class="title-content">
+      <h1 [innerHTML]="t('title')"></h1>
+      <p [innerHTML]="t('text')"></p>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2 [innerHTML]="t('intro.title')"></h2>
+    </div>
+
+    <p [innerHTML]="t('intro.text')"></p>
+    <pre copy>
+      <code [highlight]="'lifecycle' | snippet | async" [languages]="['ts']"></code>
+    </pre>
+
+    <p [innerHTML]="t('intro.order')"></p>
+    <pre copy>
+      <code [highlight]="'lifecycle-order' | snippet | async" [languages]="['ts']"></code>
+    </pre>
+
+    <p [innerHTML]="t('intro.example')"></p>
+    <ol>
+      <li><code><span class="inserted">Child</span> onInit is fired first</code></li>
+      <li><code><span class="accent">Parent</span> onInit is fired second</code></li>
+      <li><code><span class="inserted">Child</span> onReady is fired third</code></li>
+      <li><code><span class="accent">Parent</span> onReady is fired fourth</code></li>
+      <li><code><span class="inserted">Child</span> onStart is fired first</code></li>
+      <li><code><span class="accent">Parent</span> onStart is fired second</code></li>
+      <li><code><span class="inserted">Child</span> onDestroy is fired first</code></li>
+      <li><code><span class="accent">Parent</span> onDestroy is fired second</code></li>
+    </ol>
+  </section>
+</ng-container>

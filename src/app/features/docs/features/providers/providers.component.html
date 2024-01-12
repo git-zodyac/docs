@@ -14,7 +14,7 @@
     <p [innerHTML]="t('intro.root')"></p>
 
     <pre copy>
-      <code [highlight]="deps"></code>
+      <code [highlight]="'provide' | snippet | async" [languages]="['ts']"></code>
     </pre>
 
     <h3 [innerHTML]="t('intro.options.title')"></h3>
@@ -23,25 +23,34 @@
     <h4 [innerHTML]="t('intro.options.direct')"></h4>
     <p [innerHTML]="t('intro.options.direct-text')"></p>
     <pre copy>
-      <code [highlight]="root"></code>
+      <code [highlight]="'app-provider' | snippet | async" [languages]="['ts']"></code>
     </pre>
 
     <h4 [innerHTML]="t('intro.options.value')"></h4>
     <p [innerHTML]="t('intro.options.value-text')"></p>
     <pre copy>
-      <code [highlight]="dep_value"></code>
+      <code [highlight]="'provide-value' | snippet | async" [languages]="['ts']"></code>
     </pre>
 
     <h4 [innerHTML]="t('intro.options.factory')"></h4>
     <p [innerHTML]="t('intro.options.factory-text')"></p>
     <pre copy>
-      <code [highlight]="dep_factory"></code>
+      <code [highlight]="'provide-factory' | snippet | async" [languages]="['ts']"></code>
     </pre>
 
     <h4 [innerHTML]="t('intro.options.class')"></h4>
     <p [innerHTML]="t('intro.options.class-text')"></p>
     <pre copy>
-      <code [highlight]="dep_class"></code>
+      <code [highlight]="'provide-class' | snippet | async" [languages]="['ts']"></code>
+    </pre>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2 [innerHTML]="t('ref.title')"></h2>
+    </div>
+    <p [innerHTML]="t('ref.text')"></p>
+    <pre copy>
+      <code [highlight]="'module-require' | snippet | async" [languages]="['ts']"></code>
     </pre>
   </section>
 </ng-container>

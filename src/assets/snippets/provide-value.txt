@@ -1,0 +1,15 @@
+import { App, Provide } from '@zodyac/core';
+import { zEnv } from 'env.z';
+import { FirstModule } from 'modules/first/first.module';
+
+const instance = new FirstModule();
+
+export const app = new App({
+  env: zEnv,
+  providers: [
+    {
+      module: FirstModule,
+      value: instance,
+    },
+  ],
+});
