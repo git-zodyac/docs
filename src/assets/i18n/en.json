@@ -3,6 +3,7 @@
   "menu": {
     "framework": {
       "title": "Framework",
+      "documentation": "Documentation",
       "getting-started": "Getting Started",
       "installation": "Installation",
       "core-concepts": "Core concepts",
@@ -15,9 +16,8 @@
       "express": "Zod validation for Express",
       "mongoose": "Zod object to Mongoose schema"
     },
-    "docs": {
-      "title": "Documentation",
-      "read": "Read documentation",
+    "more": {
+      "title": "More",
       "cookbook": "Cookbook",
       "extending": "Extending Zodyac",
       "contributing": "Contributing"

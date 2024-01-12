@@ -1,0 +1,62 @@
+{
+  "title": "Getting&nbsp;started",
+  "text": "This is the description of the guide.",
+  "intro": {
+    "title": "Part&nbsp;1: Introduction",
+    "text": "This is the introduction to the guide.",
+    "before": {
+      "title": "Before you start",
+      "text": "Zodyac uses several tools and concepts to make your development more convenient:",
+      "node": "Node.js",
+      "ts": "TypeScript",
+      "di": "Dependency injection pattern",
+      "oop": "Object-oriented programming concepts"
+    },
+    "prerequisites": "Prerequisites"
+  },
+  "install": {
+    "title": "Part&nbsp;2: Installation",
+    "text": "This is the second part of the guide.",
+    "step1": {
+      "step": "Step&nbsp;1",
+      "text": "Install Zodyac CLI globally using npm:"
+    },
+    "step2": {
+      "step": "Step&nbsp;2",
+      "text": "Create a new project:",
+      "router": "CLI will ask if you want to add an Express router to this project. If you choose to use one, CLI will install it for you and configure it automatically.",
+      "more": "You can find more init options in the <a href=\"/docs/cli/init\">CLI documentation</a>."
+    }
+  },
+  "app": {
+    "title": "Part&nbsp3: Application",
+    "text": "This is the third part of the guide."
+  },
+  "usage": {
+    "title": "Part&nbsp;4: Modules",
+    "text": "Module is the main building block of Zodyac. It is a class that can be added to the application and can have dependencies on other modules. Modules can be used to organize your code into logical units and to separate concerns. You can start by entering the following command in your terminal:",
+    "module": "This command will create a blank module in the <code class=\"inserted\">src/modules</code> directory with the following content:",
+    "lifecycle": "You can add lifecycle hooks to your module by adding <code class=\"inserted\">onInit</code>, <code class=\"inserted\">onReady</code>, <code class=\"inserted\">onStart</code> or <code class=\"inserted\">onDestroy</code>:",
+    "hooks": {
+      "title": "Lifecycle hooks",
+      "text": "These are the hooks to manage your module's behaviour in application runtime:",
+      "init": "onInit",
+      "init-text": "This hook is called when the module is being added to dependency tree. You can use it to set up the module.",
+      "ready": "onReady",
+      "ready-text": "Being called when all the other sync modules have been initialized. It can be used to request initial data from other modules.",
+      "start": "onStart",
+      "start-text": "This hook is called when the parent <code class=\"inserted\">Application</code> is starting.",
+      "destroy": "onDestroy",
+      "destroy-text": "This hook is called when the parent <code class=\"inserted\">Application</code> is being destroyed. You can do cleanup here.",
+      "more": "Learn more about <a href=\"/docs/cli/init\">Module lifecycle</a>."
+    },
+    "more": "Learn more about <a href=\"/docs/cli/init\">Modules</a>."
+  },
+  "deps": {
+    "title": "Part&nbsp;5: Dependencies",
+    "text": "Zodyac organizes your code into modules and manages their dependencies. You can add dependencies to your module by adding <code class=\"inserted\">@Provide</code> decorator to the constructor:",
+    "provide": "This decorator can accept a single module, an array of modules or a list of providers (see below).",
+    "root": "<code class=\"inserted\">Application</code> must be the root module of your project. It is the only module that is not added to any other module. You can add dependencies to it by adding modules to your application configuration:",
+    "providers": "Learn more about <a href=\"/docs/providers\">Providers</a>."
+  }
+}

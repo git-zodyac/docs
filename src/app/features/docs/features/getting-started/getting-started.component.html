@@ -1,0 +1,115 @@
+<ng-container *transloco="let t; read: 'getstarted'">
+  <section class="title">
+    <div class="title-content">
+      <h1 [innerHTML]="t('title')"></h1>
+      <p [innerHTML]="t('text')"></p>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2 [innerHTML]="t('intro.title')"></h2>
+    </div>
+    <p [innerHTML]="t('intro.text')"></p>
+
+    <br>
+    <h3 [innerHTML]="t('intro.before.title')"></h3>
+    <p [innerHTML]="t('intro.before.text')"></p>
+    <ul>
+      <li [innerHTML]="t('intro.before.node')"></li>
+      <li [innerHTML]="t('intro.before.ts')"></li>
+      <li [innerHTML]="t('intro.before.oop')"></li>
+      <li [innerHTML]="t('intro.before.di')"></li>
+    </ul>
+
+    <br>
+    <h3 [innerHTML]="t('intro.prerequisites')"></h3>
+    <ul>
+      <li>Node.js 18+</li>
+    </ul>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2 [innerHTML]="t('install.title')"></h2>
+    </div>
+    <p [innerHTML]="t('install.text')"></p>
+
+    <div class="step">
+      <h3 [innerHTML]="t('install.step1.step')"></h3>
+      <p class="pre-code" [innerHTML]="t('install.step1.text')"></p>
+      <pre copy><code highlight="npm install -g @zodyac/cli"></code></pre>
+    </div>
+
+    <div class="step">
+      <h3 [innerHTML]="t('install.step2.step')"></h3>
+      <p class="pre-code" [innerHTML]="t('install.step2.text')"></p>
+      <pre copy><code highlight="zy init"></code></pre>
+      <p [innerHTML]="t('install.step2.router')"></p>
+      <br>
+      <p class="notice" [innerHTML]="t('install.step2.more')"></p>
+    </div>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2 [innerHTML]="t('app.title')"></h2>
+    </div>
+    <p [innerHTML]="t('app.text')"></p>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2 [innerHTML]="t('usage.title')"></h2>
+    </div>
+    <p [innerHTML]="t('usage.more')"></p>
+    <p class="pre-code" [innerHTML]="t('usage.text')"></p>
+    <pre copy><code highlight="zy generate module first"></code></pre>
+
+    <p class="pre-code" [innerHTML]="t('usage.module')"></p>
+    <pre copy>
+      <code [highlight]="module_or"></code>
+    </pre>
+
+    <!-- <p class="pre-code" [innerHTML]="t('usage.lifecycle')"></p> -->
+    <h3 [innerHTML]="t('usage.hooks.title')"></h3>
+    <p [innerHTML]="t('usage.hooks.text')"></p>
+
+    <ol>
+      <li>
+        <h4 [innerHTML]="t('usage.hooks.init')"></h4>
+        <p [innerHTML]="t('usage.hooks.init-text')"></p>
+      </li>
+      <li>
+        <h4 [innerHTML]="t('usage.hooks.ready')"></h4>
+        <p [innerHTML]="t('usage.hooks.ready-text')"></p>
+      </li>
+      <li>
+        <h4 [innerHTML]="t('usage.hooks.start')"></h4>
+        <p [innerHTML]="t('usage.hooks.start-text')"></p>
+      </li>
+      <li>
+        <h4 [innerHTML]="t('usage.hooks.destroy')"></h4>
+        <p [innerHTML]="t('usage.hooks.destroy-text')"></p>
+      </li>
+    </ol>
+    <pre copy>
+      <code [highlight]="module_lc"></code>
+    </pre>
+    <p class="notice" [innerHTML]="t('usage.hooks.more')"></p>
+  </section>
+  <section>
+    <div class="section-header">
+      <h2 [innerHTML]="t('deps.title')"></h2>
+    </div>
+
+    <p [innerHTML]="t('deps.text')"></p>
+    <pre copy>
+      <code [highlight]="deps"></code>
+    </pre>
+    <p [innerHTML]="t('deps.provide')"></p>
+
+    <p [innerHTML]="t('deps.root')"></p>
+    <pre copy>
+      <code [highlight]="root"></code>
+    </pre>
+
+    <p class="notice" [innerHTML]="t('deps.providers')"></p>
+  </section>
+</ng-container>

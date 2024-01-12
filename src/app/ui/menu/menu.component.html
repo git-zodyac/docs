@@ -5,13 +5,19 @@
   <mat-list-item routerLink="/docs/getting-started" routerLinkActive="active">
     <a mat-line>{{ t('getting-started') }}</a>
   </mat-list-item>
+
   <mat-list-item routerLink="/docs/installation" routerLinkActive="active">
     <a mat-line>{{ t('installation') }}</a>
+  </mat-list-item>
+
+  <mat-list-item routerLink="/docs" routerLinkActive="active">
+    <a matListItemTitle>{{ t('documentation') }}</a>
   </mat-list-item>
 
   <mat-list-item routerLink="/docs/core-concepts" routerLinkActive="active">
     <a mat-line>{{ t('core-concepts') }}</a>
   </mat-list-item>
+
   <mat-list-item routerLink="/docs/api-engines" routerLinkActive="active">
     <a mat-line>{{ t('api-engines') }}</a>
   </mat-list-item>
@@ -24,24 +30,21 @@
   </mat-list-item>
 
   <mat-list-item routerLink="/toolbox/zodyac-env" routerLinkActive="active">
-    <a matListItemTitle>&#64;zodyac/env</a>
+    <a matListItemTitle>&#64;zodyac/zod-env</a>
     <span matListItemLine>{{ t('environment') }}</span>
   </mat-list-item>
   <mat-list-item routerLink="/toolbox/zodyac-express" routerLinkActive="active">
-    <a matListItemTitle>&#64;zodyac/express</a>
+    <a matListItemTitle>&#64;zodyac/zod-express</a>
     <span matListItemLine>{{ t('express') }}</span>
   </mat-list-item>
   <mat-list-item routerLink="/toolbox/zodyac-mongoose" routerLinkActive="active">
-    <a matListItemTitle>&#64;zodyac/mongoose</a>
+    <a matListItemTitle>&#64;zodyac/zod-mongoose</a>
     <span matListItemLine>{{ t('mongoose') }}</span>
   </mat-list-item>
 </mat-nav-list>
-<mat-nav-list *transloco="let t; read: 'menu.docs'">
+<mat-nav-list *transloco="let t; read: 'menu.more'">
   <h3 mat-subheader>{{ t('title') }}</h3>
   <mat-divider />
-  <mat-list-item routerLink="/docs" routerLinkActive="active">
-    <a matListItemTitle>{{ t('read') }}</a>
-  </mat-list-item>
   <mat-list-item routerLink="/docs/cookbook" routerLinkActive="active">
     <a matListItemTitle>{{ t('cookbook') }}</a>
   </mat-list-item>
