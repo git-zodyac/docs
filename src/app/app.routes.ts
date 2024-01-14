@@ -1,11 +1,13 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 import { NotFoundComponent } from './features/errors/not-found/not-found.component';
+import { provideTranslocoScope } from '@ngneat/transloco';
 
 export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    providers: [provideTranslocoScope('home')],
   },
   {
     path: 'docs',
@@ -20,6 +22,7 @@ export const routes: Routes = [
   {
     path: '404',
     component: NotFoundComponent,
+    providers: [provideTranslocoScope('errors')],
   },
   {
     path: '**',

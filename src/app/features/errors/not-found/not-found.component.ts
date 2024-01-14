@@ -3,7 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { TaroCardComponent } from '../../../ui/taro-card/taro-card.component';
-import { TranslocoModule, provideTranslocoScope } from '@ngneat/transloco';
+import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
   standalone: true,
@@ -17,6 +17,5 @@ import { TranslocoModule, provideTranslocoScope } from '@ngneat/transloco';
     TaroCardComponent,
     TranslocoModule,
   ],
-  providers: [provideTranslocoScope('errors')],
 })
 export class NotFoundComponent {}

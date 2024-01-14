@@ -1,0 +1,25 @@
+@import '../../features/docs/common.scss';
+
+:host {
+  overflow-y: hidden;
+
+  .skeleton {
+    border-radius: 1rem;
+    background-color: var(--app-panel-color);
+    animation: skeleton 1s infinite alternate;
+    color: transparent;
+  }
+
+  section {
+    min-height: 30dvh;
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    opacity: .25;
+  }
+  100% {
+    opacity: .66;
+  }
+}

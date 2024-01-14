@@ -23,7 +23,7 @@
       "step": "Step&nbsp;2",
       "text": "Create a new project:",
       "router": "CLI will ask if you want to add an Express router to this project. If you choose to use one, CLI will install it for you and configure it automatically.",
-      "more": "You can find more init options in the <a href=\"/docs/cli/init\">CLI documentation</a>."
+      "more": "You can find more options in the <a href=\"/docs/cli/init\">CLI documentation</a>."
     }
   },
   "app": {

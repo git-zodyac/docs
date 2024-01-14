@@ -9,14 +9,19 @@ import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { TranslocoHttpLoader } from './transloco-loader';
-import { provideTransloco } from '@ngneat/transloco';
+import {
+  provideTransloco,
+  provideTranslocoLoadingTpl,
+} from '@ngneat/transloco';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { PageSkeleton } from './ui/page-skeleton/page-skeleton.component';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideAnimations(),
     importProvidersFrom(HttpClientModule),
+    provideTranslocoLoadingTpl(PageSkeleton),
     provideHttpClient(),
     provideTransloco({
       config: {

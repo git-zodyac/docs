@@ -5,6 +5,7 @@ import { CoreConceptsComponent } from './features/core-concepts/core-concepts.co
 import { ApiEnginesComponent } from './features/api-engines/api-engines.component';
 import { ProvidersComponent } from './features/providers/providers.component';
 import { LifecycleComponent } from './features/lifecycle/lifecycle.component';
+import { provideTranslocoScope } from '@ngneat/transloco';
 
 export const routes: Routes = [
   {
@@ -14,6 +15,7 @@ export const routes: Routes = [
   {
     path: 'getting-started',
     component: GettingStartedComponent,
+    providers: [provideTranslocoScope('getstarted')],
   },
   {
     path: 'core-concepts',
@@ -26,9 +28,11 @@ export const routes: Routes = [
   {
     path: 'lifecycle',
     component: LifecycleComponent,
+    providers: [provideTranslocoScope('lifecycle')],
   },
   {
     path: 'providers',
     component: ProvidersComponent,
+    providers: [provideTranslocoScope('providers')],
   },
 ];

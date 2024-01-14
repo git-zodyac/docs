@@ -6,6 +6,7 @@ import { SidenavService } from './ui/sidenav/sidenav.service';
 import { HeaderComponent } from './ui/header/header.component';
 import { MenuComponent } from './ui/menu/menu.component';
 import { FooterComponent } from './ui/footer/footer.component';
+import { RouterSpinnerComponent } from './ui/router-spinner/router-spinner.component';
 
 @Component({
   standalone: true,
@@ -20,6 +21,7 @@ import { FooterComponent } from './ui/footer/footer.component';
     RouterOutlet,
     MenuComponent,
     FooterComponent,
+    RouterSpinnerComponent,
   ],
 })
 export class AppComponent {
