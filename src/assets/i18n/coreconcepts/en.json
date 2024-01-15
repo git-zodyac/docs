@@ -1,0 +1,63 @@
+{
+  "title": "Core concepts",
+  "text": "Architecture, modules, dependencies, and more.",
+  "intro": {
+    "title": "Introduction",
+    "text": "Zodyac is designed to be as modular as possible. It provides a set of tools to help you make your application flexibile and easy to support. These are the core concepts of Zodyac:",
+    "items": {
+      "0": {
+        "title": "Modules",
+        "text": "All the logic for features, routes, workers and services are split and encapsulated in modules."
+      },
+      "1": {
+        "title": "Dependency Injection",
+        "text": "Modules are independent from each other, but they can communicate in a predefined way. Modules are designed to be testable and reusable."
+      },
+      "2": {
+        "title": "Clean Architecture",
+        "text": "Zodyac implements <a href=\"https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html\" target=\"_blank\">Clean Architecture</a>. It means that the core of your application is independent from the framework and the database."
+      }
+    }
+  },
+  "architecture": {
+    "title": "Architecture",
+    "text": "<a href=\"https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html\" target=\"_blank\">Clean Architecture</a> – also known as Hexagonal Architecture or Onion Architecture – is a software design pattern that separates the core of your application from the framework and the database. This allows you to easily change those without having to rewrite the business logic. On practice, it means that your application is split into layers, and each layer has a specific responsibility:",
+    "layers": {
+      "0": {
+        "title": "Routers",
+        "text": "Router control input gateway of your application. It is responsible for the communication between the framework and the application."
+      },
+      "1": {
+        "title": "Services (Domain)",
+        "text": "Services are the core of your application, they contain your business logic as a interaction bewtween models."
+      },
+      "2": {
+        "title": "Models",
+        "text": "Models are the logical representation of your data. They handle the business rules of your application."
+      },
+      "3": {
+        "title": "Entities",
+        "text": "Entity controls how your data is stored. It is a facade for a database, a file, or anything else."
+      },
+      "4": {
+        "title": "Views",
+        "text": "Views control the output gateway of your application. It is responsible for how the data is presented in response."
+      },
+      "5": {
+        "title": "Utilities",
+        "text": "Utilities are helper functions and modules that can be used anywhere in your application."
+      }
+
+    }
+  },
+  "di": {
+    "title": "Dependency Injection",
+    "text": "Dependency Injection is a technique where one object supplies the dependencies of another object. It is a way to decouple the objects so that no business code has to be changed simply because an object it depends on needs to be changed to a different one.",
+    "notice": "You can learn more about how to use it in <a href=\"https://zodyac.dev/docs/providers\">Providers</a> section."
+  },
+  "modules": {
+    "title": "Modules",
+    "text": "Modules are the building blocks of your application with their own lifecycle and input-output interface. Every module must have single responsibility which allows you to maintain your code easily.",
+    "notice": "Learn more about <a href=\"https://zodyac.dev/docs/lifecycle\">Lifecycle</a>."
+  }
+}

@@ -5,4 +5,83 @@
       <p [innerHTML]="t('text')"></p>
     </div>
   </section>
+  <section>
+    <h2 [innerHTML]="t('intro.title')"></h2>
+    <p [innerHTML]="t('intro.text')"></p>
+    <ul>
+      <li>
+        <h3 [innerHTML]="t('intro.items.0.title')"></h3>
+        <p [innerHTML]="t('intro.items.0.text')"></p>
+      </li>
+      <li>
+        <h3 [innerHTML]="t('intro.items.1.title')"></h3>
+        <p [innerHTML]="t('intro.items.1.text')"></p>
+      </li>
+      <li>
+        <h3 [innerHTML]="t('intro.items.2.title')"></h3>
+        <p [innerHTML]="t('intro.items.2.text')"></p>
+      </li>
+    </ul>
+  </section>
+  @defer (on viewport) {
+    <section>
+      <h2 [innerHTML]="t('architecture.title')"></h2>
+      <p [innerHTML]="t('architecture.text')"></p>
+      <ul>
+        <li>
+          <h3 [innerHTML]="t('architecture.layers.0.title')"></h3>
+          <p [innerHTML]="t('architecture.layers.0.text')"></p>
+        </li>
+        <li>
+          <h3 [innerHTML]="t('architecture.layers.1.title')"></h3>
+          <p [innerHTML]="t('architecture.layers.1.text')"></p>
+        </li>
+        <li>
+          <h3 [innerHTML]="t('architecture.layers.2.title')"></h3>
+          <p [innerHTML]="t('architecture.layers.2.text')"></p>
+        </li>
+        <li>
+          <h3 [innerHTML]="t('architecture.layers.3.title')"></h3>
+          <p [innerHTML]="t('architecture.layers.3.text')"></p>
+        </li>
+        <li>
+          <h3 [innerHTML]="t('architecture.layers.4.title')"></h3>
+          <p [innerHTML]="t('architecture.layers.4.text')"></p>
+        </li>
+        <li>
+          <h3 [innerHTML]="t('architecture.layers.5.title')"></h3>
+          <p [innerHTML]="t('architecture.layers.5.text')"></p>
+        </li>
+      </ul>
+    </section>
+  } @placeholder {
+    <section>
+      <h2>Architecture</h2>
+      <p>...</p>
+    </section>
+  }
+  @defer (on viewport) {
+    <section>
+      <h2 [innerHTML]="t('di.title')"></h2>
+      <p [innerHTML]="t('di.text')"></p>
+      <p class="notice" [innerHTML]="t('di.notice')"></p>
+    </section>
+  } @placeholder {
+    <section>
+      <h2>Dependency Injection</h2>
+      <p>...</p>
+    </section>
+  }
+  @defer (on viewport) {
+    <section>
+      <h2 [innerHTML]="t('modules.title')"></h2>
+      <p [innerHTML]="t('modules.text')"></p>
+      <p class="notice" [innerHTML]="t('modules.notice')"></p>
+    </section>
+  } @placeholder {
+    <section>
+      <h2>Modules</h2>
+      <p>...</p>
+    </section>
+  }
 </ng-container>

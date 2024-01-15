@@ -24,6 +24,7 @@ export const routes: Routes = [
     path: 'core-concepts',
     title: 'Core concepts | Zodyac',
     component: CoreConceptsComponent,
+    providers: [provideTranslocoScope('coreconcepts')],
   },
   {
     path: 'api-engines',
