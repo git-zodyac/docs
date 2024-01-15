@@ -10,7 +10,7 @@
 <div class="text-block" *transloco="let t; read: 'home.architecture'">
   <h2 [innerHTML]="t('title')"></h2>
   <p [innerHTML]="t('description')"></p>
-  <button mat-button color="primary">
+  <button mat-button color="primary" routerLink="/docs/core-concepts">
     <mat-icon>school</mat-icon>
     {{ t('cta') }}
   </button>
