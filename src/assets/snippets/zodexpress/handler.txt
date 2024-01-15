@@ -1,0 +1,20 @@
+import { ze, Check } from '@zodyac/zod-express';
+
+const my_error_handler: ze.ValidationOptions = {
+  errorCode: 400, // default is 406 (Not Acceptable)
+  errorHandler: (req, res, error) => { // error is zod Error
+    const error_message = error.errors[0].message;
+    // ... your error handling code
+  }
+};
+
+const my_endpoint = Check({
+  body: zBody,
+  params: zParams,
+  query: zQuery
+}, (req, res) => {
+  const body = req.body;
+  const params = req.params;
+  const query = req.query;
+  // ... the rest of your code
+}, my_error_handler);

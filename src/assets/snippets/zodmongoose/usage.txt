@@ -1,0 +1,24 @@
+import { zId, zodSchema } from '@zodyac/mongoose';
+import { model } from 'mongoose';
+import { z } from 'zod';
+
+const zUser = z.object({
+  name: z.string().min(3).max(255),
+  age: z.number().min(18).max(100),
+  active: z.boolean().default(false),
+  access: z.enum(['admin', 'user']).default('user'),
+  companyId: zId.describe('ObjectId:Company'),
+  address: z.object({
+    street: z.string(),
+    city: z.string(),
+    state: z.enum(['CA', 'NY', 'TX']),
+  }),
+  tags: z.array(z.string()),
+  createdAt: z.date(),
+  updatedAt: z.date(),
+});
+
+const schema = zodSchema(zUser);
+const userModel = model('User', schema);
+
+userModel.find({ name: 'John' });

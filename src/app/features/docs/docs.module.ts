@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { provideRouter } from '@angular/router';
+import { RouterModule, provideRouter } from '@angular/router';
 import { routes } from './docs.routes';
 import { DocsComponent } from './features/docs/docs.component';
 import { GettingStartedComponent } from './features/getting-started/getting-started.component';
@@ -29,6 +29,7 @@ import { LifecycleComponent } from './features/lifecycle/lifecycle.component';
     HighlightModule,
     CodeCopyComponent,
     CodeSnippetPipe,
+    RouterModule,
   ],
 })
 export class DocsModule {}

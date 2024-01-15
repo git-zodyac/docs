@@ -1,0 +1,3 @@
+const env = parse(env_schema, {
+  ignoreProcessEnv: true,
+});

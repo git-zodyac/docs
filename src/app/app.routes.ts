@@ -7,6 +7,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    title: 'Zodyac – A Zod-based framework for Node.js',
     providers: [provideTranslocoScope('home')],
   },
   {
@@ -21,6 +22,7 @@ export const routes: Routes = [
   },
   {
     path: '404',
+    title: 'Page not found | Zodyac',
     component: NotFoundComponent,
     providers: [provideTranslocoScope('errors')],
   },

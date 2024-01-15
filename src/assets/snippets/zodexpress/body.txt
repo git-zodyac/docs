@@ -1,0 +1,11 @@
+import { z } from 'zod';
+import { CheckBody } from '@zodyac/zod-express';
+
+const zBody = z.object({
+  // ... your zod schema
+});
+
+const my_endpoint = CheckBody(zBody, (req, res) => {
+  const body = req.body;
+  // ... the rest of your code
+});

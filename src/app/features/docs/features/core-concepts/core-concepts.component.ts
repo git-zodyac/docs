@@ -3,6 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'article[core-concepts]',
   templateUrl: './core-concepts.component.html',
-  styleUrl: './core-concepts.component.scss',
+  styleUrl: '../../../common.scss',
 })
 export class CoreConceptsComponent {}

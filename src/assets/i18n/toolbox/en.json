@@ -1,0 +1,10 @@
+{
+  "title": "Zodyac Toolbox",
+  "text": "Collection of&nbsp;tools for&nbsp;any&nbsp;project. Not&nbsp;only for&nbsp;Zodyac.",
+  "about": "About Toolbox",
+  "about-text": "Zod is&nbsp;unique and&nbsp;powerful&nbsp;tool for&nbsp;data&nbsp;validation. The&nbsp;way&nbsp;Zod describes&nbsp;data&nbsp;stuctures allows&nbsp;you to&nbsp;use&nbsp;it in&nbsp;a&nbsp;wide variety&nbsp;of&nbsp;different&nbsp;ways. Zodyac&nbsp;Toolbox adopts&nbsp;this&nbsp;power for&nbsp;you&nbsp;to&nbsp;use&nbsp;it&nbsp;for environment&nbsp;validation, model&nbsp;description and&nbsp;request&nbsp;validation.",
+  "packages": "Packages",
+  "zod-env": "Environment&nbsp;variables validation for&nbsp;proccess and&nbsp;.env&nbsp;files.",
+  "zod-express": "Zod request&nbsp;validation for&nbsp;Express.js.",
+  "zod-mongoose": "Turn&nbsp;your Zod&nbsp;schemas into&nbsp;Mongoose&nbsp;models."
+}

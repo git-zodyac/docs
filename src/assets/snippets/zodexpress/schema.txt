@@ -1,0 +1,5 @@
+import { z } from 'zod';
+
+const zBody = z.object({
+  // ... your zod schema
+});

@@ -1,0 +1,11 @@
+import { z } from 'zod';
+import { CheckParams } from '@zodyac/zod-express';
+
+const zParams = z.object({
+  // ... string params
+});
+
+const my_endpoint = CheckParams(zParams, (req, res) => {
+  const params = req.params;
+  // ... the rest of your code
+});

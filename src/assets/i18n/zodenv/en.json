@@ -1,0 +1,22 @@
+{
+  "title": "Zod env&nbsp;validator",
+  "text": "This&nbsp;package allows&nbsp;you to&nbsp;validate your&nbsp;environment&nbsp;variables using&nbsp;Zod.",
+  "install": {
+    "title": "Installation",
+    "text": "Install the&nbsp;package using&nbsp;npm:"
+  },
+  "usage": {
+    "title": "Usage",
+    "schema": "Define your&nbsp;environment&nbsp;schema:",
+    "coerce": "Don't forget to use <code class=\"inserted\">z.coerce</code> on types other than <code class=\"inserted\">String</code>!",
+    "parse": "Parse your environment using <code class=\"inserted\">parse()</code>:",
+    "infer": "Now your env infers types from Zod schema.",
+    "fallback": "You can also use <code class=\"inserted\">z.default()</code> to provide a fallback."
+  },
+  "config": {
+    "title": "Configuration",
+    "text": "By default, parse falls back to <code class=\"inserted\">process.env</code>, if no <code class=\"inserted\">.env</code> file was found.",
+    "env": "You can ignore <code class=\"inserted\">process.env</code> fallback by adding:",
+    "path": "Or you can specify it's path using <code class=\"inserted\">path</code> parameter:"
+  }
+}

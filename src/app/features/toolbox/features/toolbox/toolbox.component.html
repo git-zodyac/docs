@@ -1,0 +1,27 @@
+<ng-container *transloco="let t; read: 'toolbox'">
+  <section class="title">
+    <div class="title-content">
+      <h1 [innerHTML]="t('title')"></h1>
+      <p [innerHTML]="t('text')"></p>
+    </div>
+  </section>
+  <section>
+    <h2 [innerHTML]="t('about')"></h2>
+    <p [innerHTML]="t('about-text')"></p>
+  </section>
+  <h3 class="splitter" [innerHTML]="t('packages')"></h3>
+  <section class="grid">
+    <div class="card package" routerLink="zod-env">
+      <h3 class="card-title">&#64;zodyac/zod-env</h3>
+      <p class="card-text" [innerHTML]="t('zod-env')"></p>
+    </div>
+    <div class="card package" routerLink="zod-express">
+      <h3 class="card-title">&#64;zodyac/zod-express</h3>
+      <p class="card-text" [innerHTML]="t('zod-express')"></p>
+    </div>
+    <div class="card package" routerLink="zod-mongoose">
+      <h3 class="card-title">&#64;zodyac/zod-mongoose</h3>
+      <p class="card-text" [innerHTML]="t('zod-mongoose')"></p>
+    </div>
+  </section>
+</ng-container>

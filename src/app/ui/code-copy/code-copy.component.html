@@ -1,6 +1,4 @@
-<span class="code-wrap">
-  <ng-content />
-</span>
+<ng-content />
 <button mat-icon-button (click)="copy()" [disabled]="state() !== 'idle'">
   <mat-icon [class]="state()">{{ icon() }}</mat-icon>
 </button>

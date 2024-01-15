@@ -11,27 +11,34 @@ export const routes: Routes = [
   {
     path: '',
     component: DocsComponent,
+    title: 'Documentation | Zodyac',
+    providers: [provideTranslocoScope('docs')],
   },
   {
     path: 'getting-started',
     component: GettingStartedComponent,
+    title: 'Getting started | Zodyac',
     providers: [provideTranslocoScope('getstarted')],
   },
   {
     path: 'core-concepts',
+    title: 'Core concepts | Zodyac',
     component: CoreConceptsComponent,
   },
   {
     path: 'api-engines',
+    title: 'API Engines | Zodyac',
     component: ApiEnginesComponent,
   },
   {
     path: 'lifecycle',
+    title: 'Module lifecycle | Zodyac',
     component: LifecycleComponent,
     providers: [provideTranslocoScope('lifecycle')],
   },
   {
     path: 'providers',
+    title: 'Module providers | Zodyac',
     component: ProvidersComponent,
     providers: [provideTranslocoScope('providers')],
   },

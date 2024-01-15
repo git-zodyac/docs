@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
@@ -8,6 +9,6 @@ import { TranslocoModule } from '@ngneat/transloco';
   selector: 'section[title]',
   templateUrl: './title-section.component.html',
   styleUrl: './title-section.component.scss',
-  imports: [MatButtonModule, MatIconModule, TranslocoModule],
+  imports: [MatButtonModule, MatIconModule, TranslocoModule, RouterModule],
 })
 export class TitleSectionComponent {}

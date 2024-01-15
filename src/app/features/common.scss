@@ -17,6 +17,13 @@
     }
   }
 
+  .splitter {
+    text-align: center;
+    color: var(--theme-primary);
+    margin-block: 0;
+  }
+
+
   section:not(.title) {
     background: var(--app-bg-color);
     padding: 2rem 1.5rem;
@@ -75,6 +82,35 @@
 
     .step {
       margin-top: 2rem;
+    }
+
+    &.grid {
+      display: grid;
+      background: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+      gap: 1rem;
+
+      .card {
+        padding: 1rem;
+        background-color: var(--app-panel-color);
+        box-shadow: var(--shadow-soft);
+        color: var(--app-text-decorated);
+        border-radius: .5rem;
+
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: var(--shadow-medium);
+        }
+
+        &.package {
+          .card-title {
+            color: var(--theme-accent);
+          }
+        }
+      }
     }
   }
 }
