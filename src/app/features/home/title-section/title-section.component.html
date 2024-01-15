@@ -1,6 +1,13 @@
 <div class="content" *transloco="let t; read: 'home.title'">
-  <img src="assets/logo.png" alt="Zodyac logo">
-  <h1>Zodyac</h1>
+  <img
+    ngSrc="assets/logo@0.5x.png"
+    width="200"
+    height="200"
+    priority="auto"
+    srcset="assets/logo@0.5x.png 1x, assets/logo.png 2x"
+    alt="Zodyac logo" />
+
+    <h1>Zodyac</h1>
   <p [innerHTML]="t('main')"></p>
   <div class="cta">
     <button mat-flat-button color="primary" routerLink="/docs/getting-started">

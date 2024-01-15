@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -9,6 +10,12 @@ import { TranslocoModule } from '@ngneat/transloco';
   selector: 'section[title]',
   templateUrl: './title-section.component.html',
   styleUrl: './title-section.component.scss',
-  imports: [MatButtonModule, MatIconModule, TranslocoModule, RouterModule],
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    TranslocoModule,
+    RouterModule,
+    NgOptimizedImage,
+  ],
 })
 export class TitleSectionComponent {}

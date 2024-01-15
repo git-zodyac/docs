@@ -5,7 +5,7 @@ import { PlaceholderPipe } from './placeholder.pipe';
   standalone: true,
   selector: 'article[skeleton]',
   templateUrl: './page-skeleton.component.html',
-  styleUrl: './page-skeleton.component.scss',
+  styleUrls: ['../../features/common.scss', './page-skeleton.component.scss'],
   imports: [PlaceholderPipe],
 })
 export class PageSkeleton {}

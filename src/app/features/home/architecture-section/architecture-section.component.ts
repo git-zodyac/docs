@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,6 +9,6 @@ import { TranslocoModule } from '@ngneat/transloco';
   selector: 'section[architecture]',
   templateUrl: './architecture-section.component.html',
   styleUrl: './architecture-section.component.scss',
-  imports: [MatButtonModule, MatIconModule, TranslocoModule],
+  imports: [MatButtonModule, MatIconModule, TranslocoModule, NgOptimizedImage],
 })
 export class ArchitectureSectionComponent {}
