@@ -7,7 +7,9 @@ type SidebarMode = 'side' | 'push';
 
 @Injectable()
 export class SidenavService {
-  public readonly state = signal(true);
+  public readonly state = signal(
+    window.matchMedia('(min-width: 1024px)').matches,
+  );
   mode: SidebarMode = 'push';
 
   private onResizeSubscription!: Subscription;
