@@ -1,0 +1,27 @@
+name: API CI/CD
+
+env:
+    REGISTRY: ghcr.io
+
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch:
+
+jobs:
+    build:
+        name: Docker build and push
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: Login to registry
+              run:  docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Build image
+              run:  docker build -t ${{ env.REGISTRY }}/${{ github.repository }}:latest .
+
+            - name: Push image
+              run:  docker push ${{ env.REGISTRY }}/${{ github.repository }}:latest
