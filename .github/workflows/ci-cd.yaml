@@ -10,18 +10,34 @@ on:
   workflow_dispatch:
 
 jobs:
-    build:
-        name: Docker build and push
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2
+  build:
+    name: Docker build and push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-            - name: Login to registry
-              run:  docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+      - name: Login to registry
+        run:  docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Build image
-              run:  docker build -t ${{ env.REGISTRY }}/${{ github.repository }}:latest .
+      - name: Build image
+        run:  docker build -t ${{ env.REGISTRY }}/${{ github.repository }}:latest .
 
-            - name: Push image
-              run:  docker push ${{ env.REGISTRY }}/${{ github.repository }}:latest
+      - name: Push image
+        run:  docker push ${{ env.REGISTRY }}/${{ github.repository }}:latest
+
+  rebuild:
+    name: Deploy to server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Connect and pull
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.KEY }}
+          script: |
+            docker compose down
+            docker stop ${{ github.repository }}
+            docker pull ${{ env.REGISTRY }}/${{ github.repository }}:latest
+            docker run -d --name ${{ env.REGISTRY }}/${{ github.repository }} -p 80:80 ${{ github.repository }}
