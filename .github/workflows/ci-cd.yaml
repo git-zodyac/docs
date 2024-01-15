@@ -41,4 +41,5 @@ jobs:
             docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
             docker stop ${{ github.repository }}
             docker pull ${{ env.REGISTRY }}/${{ github.repository }}:latest
+            docker tag ${{ env.REGISTRY }}/${{ github.repository }}:latest ${{ github.repository }}
             docker run -d --name ${{ env.REGISTRY }}/${{ github.repository }} -p 80:80 ${{ github.repository }}
