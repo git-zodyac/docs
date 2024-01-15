@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Login to registry
         run:  docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
@@ -43,4 +43,4 @@ jobs:
             docker tag ${{ env.REGISTRY }}/${{ github.repository }}:latest ${{ github.repository }}
             docker stop ${{ github.event.repository.name }}
             docker rm ${{ github.event.repository.name }}
-            docker run -d --name ${{ github.event.repository.name }} -p 80:80 -p 443:443 -v "/var/lib/letsencrypt:/var/lib/letsencrypt" -v "/etc/letsencrypt:/etc/letsencrypt" ${{ github.repository }}
+            docker run -d --name ${{ github.event.repository.name }} -p 80:80 -p 443:443 -v "/etc/letsencrypt:/etc/letsencrypt" ${{ github.repository }}
