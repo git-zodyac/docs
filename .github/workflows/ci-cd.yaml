@@ -21,7 +21,7 @@ jobs:
         run:  docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build image
-        run:  docker build -t ${{ env.REGISTRY }}/${{ github.repository }}:latest .
+        run:  docker build -t ${{ env.REGISTRY }}/${{ github.repository }}:latest --build-arg NGINX=prod .
 
       - name: Push image
         run:  docker push ${{ env.REGISTRY }}/${{ github.repository }}:latest
@@ -42,4 +42,4 @@ jobs:
             docker stop ${{ github.event.repository.name }}
             docker pull ${{ env.REGISTRY }}/${{ github.repository }}:latest
             docker tag ${{ env.REGISTRY }}/${{ github.repository }}:latest ${{ github.repository }}
-            docker run -d --name ${{ github.event.repository.name }} -p 80:80 ${{ github.repository }}
+            docker run -d --name ${{ github.event.repository.name }} -p 80:80 -p 443:443 -v "/var/lib/letsencrypt:/var/lib/letsencrypt" -v "/etc/letsencrypt:/etc/letsencrypt" ${{ github.repository }}
