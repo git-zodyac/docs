@@ -27,6 +27,7 @@ jobs:
         run:  docker push ${{ env.REGISTRY }}/${{ github.repository }}:latest
 
   rebuild:
+    needs: build
     name: Deploy to server
     runs-on: ubuntu-latest
     steps:
@@ -37,7 +38,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.KEY }}
           script: |
-            docker compose down
+            docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
             docker stop ${{ github.repository }}
             docker pull ${{ env.REGISTRY }}/${{ github.repository }}:latest
             docker run -d --name ${{ env.REGISTRY }}/${{ github.repository }} -p 80:80 ${{ github.repository }}
