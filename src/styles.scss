@@ -1,10 +1,4 @@
 @import './theme.scss';
-@import 'highlight.js/styles/github-dark.css';
-
-.hljs {
-  background: var(--app-panel-accent) !important;
-  border-radius: .5rem;
-}
 
 @mixin light {
   --app-text-color: #111111;
@@ -124,6 +118,66 @@ pre {
   }
 }
 
+.markdown-page {
+  h1+p {
+    margin-block: 1rem 2rem;
+  }
+
+  h2,
+  h3 {
+    color: var(--theme-primary);
+  }
+
+  h4,
+  h5,
+  h6 {
+    color: var(--app-text-color);
+  }
+
+  h2 {
+    margin-block: 3rem 2rem;
+  }
+
+  h3 {
+    margin-block: 2rem 1rem;
+  }
+}
+
+code {
+  color: var(--theme-accent);
+  background-color: var(--app-panel-accent);
+  border-radius: .25rem;
+  padding: .25rem .5rem;
+}
+
+blockquote {
+  border-left: .25rem solid var(--theme-accent);
+  padding: .25rem 1rem;
+  margin: 2rem 0;
+  background-color: var(--app-panel-accent);
+  border-radius: .25rem;
+}
+
+pre {
+  background: var(--app-panel-accent) !important;
+  color: var(--app-text-color) !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: .5rem;
+
+  code {
+    padding: 0 !important;
+    border-radius: none !important;
+    text-shadow: none !important;
+    color: inherit !important;
+
+    .token.operator {
+      background: none !important;
+    }
+  }
+}
+
 * {
 
   scrollbar-color: rgba(0, 0, 0, .125) transparent;
@@ -131,6 +185,7 @@ pre {
 
   ::-webkit-scrollbar {
     background-color: transparent;
+    height: .66rem;
     width: .66rem;
 
     &-track {

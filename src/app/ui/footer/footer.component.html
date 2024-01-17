@@ -1,6 +1,6 @@
 <ng-container *transloco="let t; read: ''"></ng-container>
 <div class="column leading">
-  <a href="/">
+  <a routerLink="/">
     <h1>
       <img ngSrc="assets/logo@0.1x.webp" width="30" height="30" priority="low" alt="Zodyac logo">
       zodyac.dev
@@ -11,14 +11,14 @@
 
 <div class="column" *transloco="let t; read: 'menu.framework'">
   <h2>{{ t('title') }}</h2>
-  <a href="/docs/getting-started">{{ t('getting-started') }}</a>
-  <a href="/docs">{{ t('documentation') }}</a>
-  <a href="/docs/core-concepts">{{ t('core-concepts') }}</a>
-  <a href="/docs/api-engines">{{ t('api-engines') }}</a>
+  <a routerLink="/docs/getting-started">{{ t('getting-started') }}</a>
+  <a routerLink="/docs">{{ t('documentation') }}</a>
+  <a routerLink="/docs/core-concepts">{{ t('core-concepts') }}</a>
+  <a routerLink="/docs/api-engines">{{ t('api-engines') }}</a>
 </div>
 <div class="column" *transloco="let t; read: 'menu.more'">
   <h2>{{ t('title') }}</h2>
-  <a href="/docs/cookbook">{{ t('cookbook') }}</a>
-  <a href="/docs/extending">{{ t('extending') }}</a>
-  <a href="/docs/contributing">{{ t('contributing') }}</a>
+  <a routerLink="/docs/cookbook">{{ t('cookbook') }}</a>
+  <a routerLink="/docs/extending">{{ t('extending') }}</a>
+  <a routerLink="/docs/contributing">{{ t('contributing') }}</a>
 </div>

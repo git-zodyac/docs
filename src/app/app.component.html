@@ -2,7 +2,7 @@
   <mat-drawer [mode]="_menu.mode" [opened]="_menu.state()" (openedChange)="_menu.state.set($event)">
     <app-menu />
   </mat-drawer>
-  <div class="route-container">
+  <div class="route-container" nav-container>
     <app-header />
     <router-outlet />
     <app-footer />

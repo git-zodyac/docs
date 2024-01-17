@@ -1,2 +1,0 @@
-// schema is mongoose schema
-console.log(schema.obj);

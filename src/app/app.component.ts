@@ -6,7 +6,7 @@ import { SidenavService } from './ui/sidenav/sidenav.service';
 import { HeaderComponent } from './ui/header/header.component';
 import { MenuComponent } from './ui/menu/menu.component';
 import { FooterComponent } from './ui/footer/footer.component';
-import { RouterSpinnerComponent } from './ui/router-spinner/router-spinner.component';
+import { RouteContainerDirective } from './ui/route-container.directive';
 
 @Component({
   standalone: true,
@@ -21,7 +21,7 @@ import { RouterSpinnerComponent } from './ui/router-spinner/router-spinner.compo
     RouterOutlet,
     MenuComponent,
     FooterComponent,
-    RouterSpinnerComponent,
+    RouteContainerDirective,
   ],
 })
 export class AppComponent {

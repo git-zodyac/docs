@@ -1,0 +1,18 @@
+:host {
+  margin-top: 6rem;
+  padding-inline: 1rem;
+  width: calc(100% - 2rem);
+
+  section {
+    padding: 2rem 1rem;
+    color: var(--app-text-decorated);
+  }
+
+  @media (min-width: 800px) {
+    section {
+      padding: 2rem;
+      background-color: var(--app-panel-color);
+      border-radius: 2rem;
+    }
+  }
+}

@@ -1,8 +1,8 @@
-<mat-nav-list *transloco="let t; read: 'menu.framework'">
+<mat-nav-list [disableRipple]="true" *transloco="let t; read: 'menu.framework'">
   <h3 mat-subheader>{{ t('title') }}</h3>
   <!-- <mat-divider /> -->
 
-  <mat-list-item routerLink="/docs" routerLinkActive="active">
+  <mat-list-item routerLink="/docs" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     <a matListItemTitle>{{ t('documentation') }}</a>
   </mat-list-item>
 
@@ -14,14 +14,16 @@
     <a mat-line>{{ t('core-concepts') }}</a>
   </mat-list-item>
 
-  <mat-list-item routerLink="/docs/api-engines" routerLinkActive="active">
+  <mat-list-item disabled>
+    <!--  routerLink="/docs/api-engines" routerLinkActive="active" -->
     <a mat-line>{{ t('api-engines') }}</a>
   </mat-list-item>
 </mat-nav-list>
-<mat-nav-list *transloco="let t; read: 'menu.toolbox'">
+
+<mat-nav-list [disableRipple]="true" *transloco="let t; read: 'menu.toolbox'">
   <h3 mat-subheader>{{ t('title') }}</h3>
-  <!-- <mat-divider /> -->
-  <mat-list-item routerLink="/toolbox" routerLinkActive="active">
+
+  <mat-list-item routerLink="/toolbox" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     <a mat-line>{{ t('about') }}</a>
   </mat-list-item>
 
@@ -38,16 +40,20 @@
     <span matListItemLine>{{ t('mongoose') }}</span>
   </mat-list-item>
 </mat-nav-list>
-<mat-nav-list *transloco="let t; read: 'menu.more'">
+
+<mat-nav-list [disableRipple]="true" disabled *transloco="let t; read: 'menu.more'">
   <h3 mat-subheader>{{ t('title') }}</h3>
-  <!-- <mat-divider /> -->
-  <mat-list-item routerLink="/docs/cookbook" routerLinkActive="active">
+
+  <mat-list-item>
+    <!--  routerLink="/docs/cookbook" routerLinkActive="active" -->
     <a matListItemTitle>{{ t('cookbook') }}</a>
   </mat-list-item>
-  <mat-list-item routerLink="/docs/extending" routerLinkActive="active">
+  <mat-list-item>
+    <!-- routerLink="/docs/extending" routerLinkActive="active" -->
     <a matListItemTitle>{{ t('extending') }}</a>
   </mat-list-item>
-  <mat-list-item routerLink="/docs/contributing" routerLinkActive="active">
+  <mat-list-item>
+    <!-- routerLink="/docs/contributing" routerLinkActive="active" -->
     <a matListItemTitle>{{ t('contributing') }}</a>
   </mat-list-item>
 </mat-nav-list>

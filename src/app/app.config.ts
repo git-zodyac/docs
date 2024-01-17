@@ -13,8 +13,8 @@ import {
   provideTransloco,
   provideTranslocoLoadingTpl,
 } from '@ngneat/transloco';
-import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { PageSkeleton } from './ui/page-skeleton/page-skeleton.component';
+import { provideMarkdown } from 'ngx-markdown';
 import {
   NgxGoogleAnalyticsModule,
   NgxGoogleAnalyticsRouterModule,
@@ -29,6 +29,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(NgxGoogleAnalyticsRouterModule),
     provideTranslocoLoadingTpl(PageSkeleton),
     provideHttpClient(),
+    provideMarkdown(),
     provideTransloco({
       config: {
         availableLangs: ['en', 'ru'],
@@ -38,11 +39,5 @@ export const appConfig: ApplicationConfig = {
       },
       loader: TranslocoHttpLoader,
     }),
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        fullLibraryLoader: () => import('highlight.js'),
-      },
-    },
   ],
 };

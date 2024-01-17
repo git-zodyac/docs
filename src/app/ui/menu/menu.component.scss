@@ -15,11 +15,25 @@
 
   mat-list-item {
     color: inherit;
+    transition: .1s ease-in-out;
+    border-radius: 1rem;
   }
+
   [matListItemTitle] {
     color: var(--theme-primary);
   }
   [matListItemLine] {
     color: var(--app-neutral);
+  }
+
+  .active {
+    background-color: var(--app-panel-accent);
+    pointer-events: none;
+    cursor: default;
+    opacity: .66;
+
+    a {
+      color: var(--theme-accent);
+    }
   }
 }

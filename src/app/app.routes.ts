@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 import { NotFoundComponent } from './features/errors/not-found/not-found.component';
 import { provideTranslocoScope } from '@ngneat/transloco';
+import { MarkdownView } from './markdown-view/markdown-view.component';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,10 @@ export const routes: Routes = [
     title: 'Page not found | Zodyac',
     component: NotFoundComponent,
     providers: [provideTranslocoScope('errors')],
+  },
+  {
+    path: 'experimental-md',
+    component: MarkdownView,
   },
   {
     path: '**',

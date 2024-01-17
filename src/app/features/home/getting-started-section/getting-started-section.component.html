@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="step-content">
-      <pre copy><code highlight="npm install -g @zodyac/cli" [languages]="['console']"></code></pre>
+      <markdown [data]="install" />
     </div>
   </div>
   <div class="step">
@@ -27,8 +27,7 @@
       </div>
     </div>
     <div class="step-content">
-      <pre copy><code highlight="zy init" [languages]="['console']"></code></pre>
-
+      <markdown [data]="init" />
       <div class="notice" [innerHTML]="t('step-2.notice')"></div>
     </div>
   </div>
@@ -43,7 +42,7 @@
       </div>
     </div>
     <div class="step-content">
-      <pre copy><code highlight="zy serve" [languages]="['console']"></code></pre>
+      <markdown [data]="serve" />
     </div>
   </div>
 </ng-container>

@@ -1,4 +1,0 @@
-import { Module } from '@zodyac/core';
-import { zEnv } from 'env.z';
-
-export class FirstModule extends Module<typeof zEnv> {}

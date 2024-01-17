@@ -1,7 +1,0 @@
-import { App } from '@zodyac/core';
-import { zEnv } from 'env.z';
-
-export const app = new App({
-  env: zEnv,
-  providers: [],
-});
