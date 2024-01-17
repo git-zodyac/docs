@@ -31,5 +31,19 @@
     margin-inline: -1rem !important;
     width: 100% !important;
   }
-}
 
+  blockquote+pre {
+    border-radius: 0 0 1rem 1rem;
+    margin-top: -2rem !important;
+  }
+
+  blockquote:has(+pre) {
+    border: none;
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: 1px solid var(--app-panel-color);
+
+    p {
+      margin-block: .5rem;
+    }
+  }
+}

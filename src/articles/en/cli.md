@@ -57,6 +57,7 @@ And if you choose to use [Express.js](https://expressjs.com) router, it will als
 
 > [!TIP]
 > You can add [Express.js](https://expressjs.com) router whenever you want by running `zy add express`.
+> Learn more about [API Engines](/docs/api-engines).
 
 ### Serving
 
@@ -121,6 +122,9 @@ Options:
 These files will be generated:
 - \+ `src/routers/<name>/<name>.router.ts`
 - M `src/app.router.ts` (if `--nest` is set to `root`, otherwise `src/routers/<name>/<name>.router.ts`)
+
+> [!NOTE]
+> You can learn more about Routers from [API Engines](/docs/api-engines) section.
 
 ### Generating a service
 
