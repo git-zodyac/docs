@@ -1,0 +1,35 @@
+.markdown-page {
+  h1+p {
+    margin-block: 1rem 2rem;
+  }
+
+  h2,
+  h3 {
+    color: var(--theme-primary);
+  }
+
+  h4,
+  h5,
+  h6 {
+    color: var(--app-text-color);
+  }
+
+  h2 {
+    margin-block: 3rem 2rem;
+  }
+
+  h3 {
+    margin-block: 2rem 1rem;
+  }
+
+  pre {
+    margin-inline: -1rem !important;
+    width: 100% !important;
+  }
+
+  blockquote {
+    margin-inline: -1rem !important;
+    width: 100% !important;
+  }
+}
+

@@ -1,4 +1,5 @@
 @import './theme.scss';
+@import './markdown.scss';
 
 @mixin light {
   --app-text-color: #111111;
@@ -108,41 +109,6 @@ pre {
   z-index: 0;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.markdown-page {
-  h1+p {
-    margin-block: 1rem 2rem;
-  }
-
-  h2,
-  h3 {
-    color: var(--theme-primary);
-  }
-
-  h4,
-  h5,
-  h6 {
-    color: var(--app-text-color);
-  }
-
-  h2 {
-    margin-block: 3rem 2rem;
-  }
-
-  h3 {
-    margin-block: 2rem 1rem;
-  }
-}
-
 code {
   color: var(--theme-accent);
   background-color: var(--app-panel-accent);
@@ -210,5 +176,15 @@ pre {
     ::-webkit-scrollbar-thumb {
       background-color: rgba(0, 0, 0, .25);
     }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

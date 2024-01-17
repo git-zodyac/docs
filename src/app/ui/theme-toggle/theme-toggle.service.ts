@@ -41,11 +41,11 @@ export class ThemeToggleService {
 
     if (!theme) {
       target = this.device() === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('__theme', target);
     } else {
       target = theme === 'dark' ? 'light' : 'dark';
     }
 
+    localStorage.setItem('__theme', target);
     this.theme.set(target);
     return;
   }

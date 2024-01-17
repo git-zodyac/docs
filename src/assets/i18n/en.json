@@ -6,7 +6,8 @@
       "documentation": "Documentation",
       "getting-started": "Getting Started",
       "core-concepts": "Core concepts",
-      "api-engines": "API Engines"
+      "api-engines": "API Engines",
+      "cli": "Command line"
     },
     "toolbox": {
       "title": "Toolbox",
