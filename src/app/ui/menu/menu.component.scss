@@ -19,9 +19,14 @@
     border-radius: 1rem;
   }
 
+  [mat-line] {
+    color: var(--theme-primary);
+  }
+
   [matListItemTitle] {
     color: var(--theme-primary);
   }
+
   [matListItemLine] {
     color: var(--app-neutral);
   }
@@ -32,7 +37,8 @@
     cursor: default;
     // opacity: .66;
 
-    a {
+    a,
+    [mat-line] {
       color: var(--theme-accent);
     }
   }
