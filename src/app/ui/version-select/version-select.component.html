@@ -1,4 +1,4 @@
-<mat-select [value]="_version.version()" (valueChange)="_version.set($event)" *transloco="let t; read: 'version'">
+<mat-select disabled [value]="_version.version()" (valueChange)="_version.set($event)" *transloco="let t; read: 'version'">
   @for (version of versions; track version) {
     <mat-option [value]="version">{{ t(version) }}</mat-option>
   }

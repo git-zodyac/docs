@@ -21,6 +21,15 @@
       color: var(--app-text-decorated);
     }
 
+    .notice {
+      margin-top: 2rem;
+      color: var(--app-text-color);
+      background-color: var(--app-panel-color);
+      border-radius: .5rem;
+      font-size: 0.85rem;
+      padding: 1rem .5rem;
+    }
+
     .cta {
       display: flex;
       flex-flow: row nowrap;

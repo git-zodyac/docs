@@ -2,7 +2,8 @@
   "title": {
     "main": "A&nbsp;modular Node.JS&nbsp;framework for&nbsp;<a href=\"https://npmjs.com/package/zod\" target=\"_blank\">zod&nbsp;maniacs</a>. Turn&nbsp;your&nbsp;zod&nbsp;schemas into&nbsp;a fully&nbsp;functional REST&nbsp;API with&nbsp;minimal&nbsp;effort.",
     "cta": "Get started",
-    "source": "Source code"
+    "source": "Source code",
+    "beta": "⚠️&nbsp;&nbsp;This project is in beta. Please, feel free to experiment and contribute."
   },
   "features": {
     "card-0": {

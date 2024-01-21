@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
 import { Observable, map } from 'rxjs';
+import { VersionService } from './version.service';
 
 @Injectable({
   providedIn: 'root',
@@ -10,6 +11,7 @@ export class DocsService {
   constructor(
     private http: HttpClient,
     private transloco: TranslocoService,
+    private version: VersionService,
   ) {}
 
   getDocs(page: string): Observable<{
@@ -17,8 +19,9 @@ export class DocsService {
     content: string;
   }> {
     const lang = this.transloco.getActiveLang();
+    const v = this.version.version();
     return this.http
-      .get(`/articles/${lang}/${page}.md`, { responseType: 'text' })
+      .get(`/articles/${v}/${lang}/${page}.md`, { responseType: 'text' })
       .pipe(
         map((res) => {
           if (!res.startsWith('#')) throw new Error('Invalid markdown file');
@@ -36,7 +39,7 @@ export class DocsService {
   }> {
     const lang = this.transloco.getActiveLang();
     return this.http
-      .get(`/articles/${lang}/toolbox/${page}.md`, { responseType: 'text' })
+      .get(`/articles/toolbox/${lang}/${page}.md`, { responseType: 'text' })
       .pipe(
         map((res) => {
           if (!res.startsWith('#')) throw new Error('Invalid markdown file');

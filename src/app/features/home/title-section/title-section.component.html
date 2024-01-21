@@ -1,15 +1,12 @@
 <div class="content" *transloco="let t; read: 'home.title'">
-  <img
-    ngSrc="assets/logo@0.5x.webp"
-    width="200"
-    height="200"
-    priority="high"
-    srcset="assets/logo@0.5x.webp 1x, assets/logo.webp 2x"
-    alt="Zodyac logo"
-  />
+  <img ngSrc="assets/logo@0.5x.webp" width="200" height="200" priority="high"
+    srcset="assets/logo@0.5x.webp 1x, assets/logo.webp 2x" alt="Zodyac logo" />
 
-    <h1>Zodyac</h1>
+  <h1>Zodyac</h1>
   <p [innerHTML]="t('main')"></p>
+
+  <p class="notice" [innerHTML]="t('beta')"></p>
+
   <div class="cta">
     <button mat-flat-button color="primary" routerLink="/docs/getting-started">
       <mat-icon>code</mat-icon>
