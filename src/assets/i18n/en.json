@@ -22,5 +22,15 @@
       "extending": "Extending Zodyac",
       "contributing": "Contributing"
     }
+  },
+  "version": {
+    "v1": "Version 1 (beta)",
+    "v2": "Version 2 (beta)"
+  },
+  "theme": {
+    "hold": "Hold SHIFT and click to reset",
+    "reset": "Theme is reset to default",
+    "light": "Light theme",
+    "dark": "Dark theme"
   }
 }

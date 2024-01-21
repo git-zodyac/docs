@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { TranslocoModule } from '@ngneat/transloco';
+import { VersionSelect } from '../version-select/version-select.component';
 
 @Component({
   selector: 'app-menu',
@@ -16,6 +17,7 @@ import { TranslocoModule } from '@ngneat/transloco';
     MatDividerModule,
     TranslocoModule,
     RouterModule,
+    VersionSelect,
   ],
 })
 export class MenuComponent {}

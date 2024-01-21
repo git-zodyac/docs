@@ -24,7 +24,7 @@ Before reading this article, please make sure you've read [Core concepts](/docs/
 
 ### Routers
 
-Routers are sets of routes that are used to define REST APi endpoints of your application. It is responsible for the communication between the frontend and backend.
+Routers are sets of routes that are used to define REST API endpoints of your application. It is responsible for the communication between the frontend and backend.
 
 To create a router, you have several options:
 
@@ -62,104 +62,8 @@ export const task_routes = Routes([
 ]);
 ```
 
-#### Handlers
-
-Handlers are functions that are called when a request is made to the route. They are responsible for the business logic of your application.
-
-In the example above, we are using a `TaskService` to handle the business logic of our application, but you can use any **Express-compatible** function:
-
-```ts
-import { Request, Response } from "express";
-import { Routes } from "@zodyac/express-core";
-
-export const create = (req: Request, res: Response) => {
-  // ...
-  return res.status(200).json({ message: "Task created" });
-};
-
-export const task_routes = Routes([
-  {
-    path: "/",
-    method: "put",
-    handler: create,
-  },
-]);
-```
-
-Or you can even use an array of handlers:
-
-```ts
-import { Request, Response } from "express";
-import { Routes } from "@zodyac/express-core";
-
-export const preCreate = (req: Request, res: Response, next: NextFunction) => {
-  // ...
-  next();
-};
-
-export const create = (req: Request, res: Response) => {
-  // ...
-  return res.status(200).json({ message: "Task created" });
-};
-
-export const task_routes = Routes([
-  {
-    path: "/",
-    method: "put",
-    handler: [preCreate, create],
-  },
-]);
-```
-
-#### Nested routers
-
-You can nest routers by passing an array of sub-routes to the route:
-
-```ts
-import { TaskService } from "services/task/task.service";
-import { assignee_routes } from "./assignee/assignee.router";
-import { Routes } from "@zodyac/express-core";
-
-export const task_routes = Routes([
-  {
-    path: "/",
-    method: "put",
-    handler: service.create,
-  },
-  // ...
-  {
-    path: "/:id/assignee",
-    method: "get",
-    routes: assignee_routes,
-  },
-]);
-```
-
-Or using a `Router` class instance:
-
-```ts
-import { TaskService } from "services/task/task.service";
-import { AssigneeRouter } from "./assignee/assignee.router";
-
-const assignee_router = new AssigneeRouter();
-
-export const task_routes = Routes([
-  {
-    path: "/",
-    method: "put",
-    handler: service.create,
-  },
-  // ...
-  {
-    path: "/:id/assignee",
-    method: "get",
-    module: assignee_router,
-  },
-]);
-```
-
 > [!NOTE]
-> Learn more about Routers in [Routers](/docs/routers) section.
+> Learn more about Routers in [Routers](/docs/express-router) section.
 
 ### Services
 

@@ -1,9 +1,10 @@
+<version-select />
 <mat-nav-list [disableRipple]="true" *transloco="let t; read: 'menu.framework'">
   <h3 mat-subheader>{{ t('title') }}</h3>
   <!-- <mat-divider /> -->
 
   <mat-list-item routerLink="/docs" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-    <span matListItemTitle>{{ t('documentation') }}</span>
+    <span mat-line>{{ t('documentation') }}</span>
   </mat-list-item>
 
   <mat-list-item routerLink="/docs/getting-started" routerLinkActive="active">

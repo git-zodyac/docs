@@ -29,6 +29,10 @@
     "card2": {
       "title": "CLI",
       "text": "Using&nbsp;CLI to&nbsp;manage your&nbsp;application."
+    },
+    "card3": {
+      "title": "Express routers",
+      "text": "A deep&nbsp;dive&nbsp;into using&nbsp;Routers in&nbsp;Zodyac&nbsp;application."
     }
   },
   "toolbox": {

@@ -1,22 +1,6 @@
 @import './theme.scss';
 @import './markdown.scss';
 
-@mixin light {
-  --app-text-color: #111111;
-  --app-text-decorated: #6f6f6f;
-  --app-bg-color: #fefefe;
-  --app-panel-color: #ffffff;
-  --app-panel-accent: #f5f5f5;
-}
-
-@mixin dark {
-  --app-text-color: #d9d9d9;
-  --app-text-decorated: #cdcdcd;
-  --app-bg-color: #2a2a2a;
-  --app-panel-color: #242427;
-  --app-panel-accent: #1e1e1e;
-}
-
 @media (prefers-color-scheme: light) {
   body {
     @include light;
@@ -150,6 +134,7 @@ pre {
   scrollbar-width: thin;
 
   ::-webkit-scrollbar {
+    margin-right: .25rem;
     background-color: transparent;
     height: .66rem;
     width: .66rem;

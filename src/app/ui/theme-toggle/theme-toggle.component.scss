@@ -19,7 +19,12 @@
   &.theme-dark {
     color: var(--theme-primary);
   }
+
   &.theme-light {
     color: var(--theme-accent);
+  }
+
+  &.theme-reset {
+    color: var(--theme-warn);
   }
 }

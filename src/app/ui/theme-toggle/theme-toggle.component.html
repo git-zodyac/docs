@@ -1,1 +1,6 @@
-<mat-icon>{{ ((_theme.theme() ?? _theme.device()) === 'dark')? 'light' : 'dark' }}_mode</mat-icon>
+<ng-container *transloco="let t; read: 'theme'">
+  <mat-icon matTooltipPosition="before" [matTooltip]="t( isReset()? 'hold' : toSet )">
+    @if (isReset()) { format_color_reset }
+    @else { {{ toSet }}_mode }
+  </mat-icon>
+</ng-container>

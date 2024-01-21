@@ -1,6 +1,7 @@
 :host {
   display: flex;
   flex-flow: column nowrap;
+  // position: relative;
   overflow-x: hidden;
   overflow-y: auto;
   max-height: calc(100% - 2rem);
@@ -10,8 +11,15 @@
   padding: 1rem;
   gap: 1rem;
 
-  color: var(--app-text-color);
-  background-color: var(--app-panel-color);
+  &::after {
+    background-color: var(--app-panel-color);
+    position: absolute;
+    opacity: .33;
+    content: '';
+    z-index: -1;
+    inset: 0;
+
+  }
 
   mat-list-item {
     color: inherit;
@@ -32,7 +40,7 @@
   }
 
   .active {
-    background-color: var(--app-panel-accent);
+    background-color: var(--app-panel-color);
     pointer-events: none;
     cursor: default;
     // opacity: .66;
