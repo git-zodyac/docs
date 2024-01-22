@@ -1,57 +1,51 @@
-import { Injectable, effect, signal } from '@angular/core';
-
-export type Theme = 'light' | 'dark';
+import { Injectable, computed, effect, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ThemeToggleService {
-  readonly theme = signal<Theme | null>(
-    localStorage.getItem('__theme') as Theme | null,
+  readonly chosen = signal<boolean | null>(
+    (function () {
+      const theme = localStorage.getItem('__theme');
+      if (!theme) return null;
+      return theme === 'dark';
+    })(),
   );
+
+  readonly setDark = computed<boolean>(() => {
+    const chosen = this.chosen();
+    if (chosen === null) return this.device();
+    return chosen;
+  });
 
   private isDefaultDark = window.matchMedia('(prefers-color-scheme: dark)');
-  readonly device = signal<Theme>(
-    this.isDefaultDark.matches ? 'dark' : 'light',
-  );
+  readonly device = signal<boolean>(this.isDefaultDark.matches);
 
   constructor() {
-    this.isDefaultDark.addEventListener('change', (e) => {
-      if (this.theme()) return;
-
-      const theme = e.matches ? 'dark' : 'light';
-
-      this.device.set(theme);
-    });
+    this.isDefaultDark.addEventListener('change', (e) =>
+      this.device.set(e.matches),
+    );
 
     effect(() => {
-      const theme = this.theme();
-      document.body.classList.remove('theme-light', 'theme-dark');
-
-      if (!theme) return;
-
-      document.body.classList.add(`theme-${theme}`);
+      const theme = this.setDark();
+      document.body.classList.toggle('theme-dark', theme);
     });
   }
 
   toggle(): void {
-    const theme = this.theme();
+    const theme = this.setDark();
+    let to_set: boolean;
 
-    let target: Theme;
+    if (theme === null) to_set = !this.device();
+    else to_set = !theme;
 
-    if (!theme) {
-      target = this.device() === 'dark' ? 'light' : 'dark';
-    } else {
-      target = theme === 'dark' ? 'light' : 'dark';
-    }
-
-    localStorage.setItem('__theme', target);
-    this.theme.set(target);
+    localStorage.setItem('__theme', to_set ? 'dark' : 'light');
+    this.chosen.set(to_set);
     return;
   }
 
   reset(): void {
     localStorage.removeItem('__theme');
-    this.theme.set(null);
+    this.chosen.set(null);
   }
 }

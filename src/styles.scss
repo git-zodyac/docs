@@ -1,18 +1,6 @@
 @import './theme.scss';
 @import './markdown.scss';
 
-@media (prefers-color-scheme: light) {
-  body {
-    @include light;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    @include dark;
-  }
-}
-
 html,
 body {
   font-size: 14px;
@@ -26,14 +14,6 @@ body {
 
   * {
     color: inherit;
-  }
-
-  &.theme-light {
-    @include light;
-  }
-
-  &.theme-dark {
-    @include dark;
   }
 
   &::after {

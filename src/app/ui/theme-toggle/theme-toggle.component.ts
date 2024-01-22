@@ -6,7 +6,7 @@ import {
   signal,
 } from '@angular/core';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { Theme, ThemeToggleService } from './theme-toggle.service';
+import { ThemeToggleService } from './theme-toggle.service';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslocoModule } from '@ngneat/transloco';
@@ -32,15 +32,9 @@ export class ThemeToggleComponent {
     private _snack: MatSnackBar,
   ) {
     effect(() => {
-      const theme = this._theme.theme();
-      const device = this._theme.device();
+      const setDark = this._theme.setDark();
       if (this._el?.nativeElement) {
-        this._el.nativeElement.classList.remove('theme-light', 'theme-dark');
-        if (theme) {
-          this._el.nativeElement.classList.add(`theme-${theme}`);
-        } else {
-          this._el.nativeElement.classList.add(`theme-${device}`);
-        }
+        this._el.nativeElement.classList.toggle('theme-dark', setDark);
       }
     });
 
@@ -73,10 +67,7 @@ export class ThemeToggleComponent {
     this.isReset.set(false);
   }
 
-  get state(): Theme {
-    return this._theme.theme() ?? this._theme.device();
-  }
-  get toSet(): Theme {
-    return this.state === 'dark' ? 'light' : 'dark';
+  get toSet() {
+    return this._theme.setDark() ? 'light' : 'dark';
   }
 }
